@@ -6,6 +6,7 @@ import com.example.adapter.CustomListAid;
 import com.example.items.MyListAid;
 
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.content.Intent;
@@ -19,7 +20,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 
-public class AIDActivity extends ActionBarActivity {
+public class AIDActivity extends AppCompatActivity {
 	
 	ArrayAdapter<MyListAid> adapter;
 	ListView lv_menu;

@@ -7,12 +7,13 @@ import com.example.items.MyListdataHospital;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class ListHospitalActivity extends ActionBarActivity {
+public class ListHospitalActivity extends AppCompatActivity {
 	
 	ArrayAdapter<MyListdataHospital> adapter;
 	ListView lv_menu;

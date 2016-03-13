@@ -5,13 +5,17 @@ import java.util.ArrayList;
 import com.example.items.MyListHospital;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
 import android.widget.Spinner;
+import android.widget.Toast;
 
-public class HospitalActivity extends ActionBarActivity {
+public class HospitalActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 	
 	ArrayAdapter<MyListHospital> adapter;
 	
@@ -87,8 +91,8 @@ public class HospitalActivity extends ActionBarActivity {
 		East.setAdapter(adapter_East);
 		West.setAdapter(adapter_West);
 		NorthEast.setAdapter(adapter_NorthEast);
-		
 
+		Realm.setOnItemSelectedListener(this);
 		}
 		
 	@Override
@@ -108,5 +112,25 @@ public class HospitalActivity extends ActionBarActivity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+	@Override
+	public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+		switch (parent.getId()){
+			case R.id.spinner_hosrealm:
+				if(position == 0)
+					Toast.makeText(HospitalActivity.this, "Test", Toast.LENGTH_SHORT).show();
+				else if(position == 1)
+					Toast.makeText(HospitalActivity.this, "Test1", Toast.LENGTH_SHORT).show();
+				break;
+			case R.id.spinner_hosbkk:
+				Toast.makeText(HospitalActivity.this, "Test11111", Toast.LENGTH_SHORT).show();
+				break;
+		}
+	}
+
+	@Override
+	public void onNothingSelected(AdapterView<?> parent) {
+
 	}
 }

@@ -5,6 +5,7 @@ import com.example.items.MyListMenuItem;
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,7 +14,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class ManuActivity extends ActionBarActivity {
+public class ManuActivity extends AppCompatActivity {
 	ArrayAdapter<MyListMenuItem> adapter;
 	ListView lv_menu;
 	

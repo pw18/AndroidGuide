@@ -6,6 +6,7 @@ import com.example.adapter.CustomListPharmaceutical;
 import com.example.items.MyListPharmaceuticalItem;
 
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.content.Intent;
@@ -20,14 +21,14 @@ import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 
 
-public class PharmaceuticalActivity extends ActionBarActivity {
+public class PharmaceuticalActivity extends AppCompatActivity {
 	ArrayAdapter<MyListPharmaceuticalItem> adapter;
 	ListView lv_menu;
 	EditText et_search;
 	
-	String[] txt = {"กระเพาะปัสสาวะอักเสบ","กรดไหลย้อน","กลาก","เกลื้อน","กุ้งยิง","ไข้หวัด","คลื่นไส้อาเจียน","เชื้อราที่ง่ามนิ้วเท้า","เชื้อราที่เล็บ","ตกขาว","ท้องผูก","ท้องร่วง","ปวดประจำเดือน","ปวดฟัน"
-			,"ปวดศีรษะไมเกรน","แผลพุพอง","ผื่นแพ้","แผลร้อนใน","ผิวหนังอักเสบจากพิษแมลง","แผลอักเสบติดเชื้อ","แผลในกระเพาะอาหาร","พยาธิ","เริม","เลือดกำเดาไหล","ลมพิษ","เลือดออกตามไรฟัน","เวียนศีรษะ"
-			,"หัด","หัดเยอรมัน	","หิด"};
+	String[] txt = {"๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝะป๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝัก๏ฟฝสบ","๏ฟฝรด๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอน","๏ฟฝ๏ฟฝาก","๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอน","๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝิง","๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝัด","๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝยน","๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝาท๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ","๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝาท๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ","๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ","๏ฟฝ๏ฟฝอง๏ฟฝูก","๏ฟฝ๏ฟฝอง๏ฟฝ๏ฟฝวง","๏ฟฝวด๏ฟฝ๏ฟฝะจ๏ฟฝ๏ฟฝ๏ฟฝอน","๏ฟฝวด๏ฟฝัน"
+			,"๏ฟฝวด๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝรน","๏ฟฝลพุพอง","๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ","๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอน๏ฟฝ","๏ฟฝ๏ฟฝ๏ฟฝหนัง๏ฟฝัก๏ฟฝสบ๏ฟฝาก๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝลง","๏ฟฝ๏ฟฝ๏ฟฝัก๏ฟฝสบ๏ฟฝิด๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ","๏ฟฝ๏ฟฝในก๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ","๏ฟฝ๏ฟฝาธ๏ฟฝ","๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ","๏ฟฝ๏ฟฝ๏ฟฝอด๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ","๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ","๏ฟฝ๏ฟฝ๏ฟฝอด๏ฟฝอก๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝรฟัน","๏ฟฝ๏ฟฝ๏ฟฝยน๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ"
+			,"๏ฟฝัด","๏ฟฝัด๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝัน	","๏ฟฝิด"};
 	
 	ArrayList<MyListPharmaceuticalItem> items;
 	ArrayList<MyListPharmaceuticalItem> n_item;
