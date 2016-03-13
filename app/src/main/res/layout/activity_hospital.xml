@@ -1,0 +1,126 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.androidguide.HospitalActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/imageView_iconhospital"
+            android:layout_width="84dp"
+            android:layout_height="100dp"
+            android:maxHeight="50dp"
+            android:maxWidth="50dp"
+            android:src="@android:drawable/ic_input_add" />
+
+        <TextView
+            android:id="@+id/textView_hotpital_listprovince"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:text="โรงพยาบาล"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+           
+
+            <TextView
+                android:id="@+id/textView_listview_listaid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ปริมณฑล" />
+
+            <Spinner
+                android:id="@+id/spinner_hosrealm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txt2_datadiseases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ภาคกลาง" />
+
+            <Spinner
+                android:id="@+id/spinner_hosbkk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ภาคเหนือ" />
+
+            <Spinner
+                android:id="@+id/spinner_hosnorth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ภาคใต้" />
+
+            <Spinner
+                android:id="@+id/spinner_hossouth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ภาคตะวันออก" />
+
+            <Spinner
+                android:id="@+id/spinner_hoseast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ภาคตะวันตก" />
+
+            <Spinner
+                android:id="@+id/spinner_hoswest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ภาคตะวันออกเฉียงเหนือ" />
+
+            <Spinner
+                android:id="@+id/spinner_hosnortheast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
