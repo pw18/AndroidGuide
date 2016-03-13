@@ -1,31 +1,30 @@
 package com.example.androidguide;
 
-import java.util.ArrayList;
-
-import org.json.JSONArray;
-import org.json.JSONObject;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ListView;
 
 import com.example.adapter.CustomListDiseases;
 import com.example.controller.MyWebService;
 import com.example.controller.MyWebServiceListener;
 import com.example.items.MyListDiseasesItem;
 
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.AdapterView.OnItemClickListener;
+import org.json.JSONArray;
 
-public class ListDiseasesActivity extends AppCompatActivity {
+import java.util.ArrayList;
+
+public class ListDiseasesActivity extends Fragment {
 
 	ArrayAdapter<MyListDiseasesItem> adapter;
 	ListView lv_menu;
@@ -44,35 +43,46 @@ public class ListDiseasesActivity extends AppCompatActivity {
 	ArrayList<MyListDiseasesItem> items;
 	ArrayList<MyListDiseasesItem> n_item;
 
+	public static ListDiseasesActivity newInstance(){
+		ListDiseasesActivity fragment = new ListDiseasesActivity();
+
+		return fragment;
+	}
+
+	public ListDiseasesActivity(){
+
+	}
+
+	@Nullable
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_list_diseases);
-		setWidget();
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		View view = inflater.inflate(R.layout.activity_list_diseases, container, false);
+
+		setWidget(view);
 		items = new ArrayList<MyListDiseasesItem>();
 		n_item = new ArrayList<MyListDiseasesItem>();
-		
+
 		MyWebServiceListener listener = new MyWebServiceListener() {
-			
+
 			@Override
 			public void myWebServiceOK(String result) throws Exception {
 				if(result != null && !"".equals(result)){
 					JSONArray jsonArray = new JSONArray(result);
 					if(jsonArray != null && jsonArray.length() != 0){
 						for(int i=0; i<jsonArray.length(); i++){
-							
+
 						}
 					}
 				}
 			}
-			
+
 			@Override
 			public void myWebServiceFailed() {
-				
+
 			}
 		};
-		
-		new MyWebService(ListDiseasesActivity.this, listener, "GET", url).execute();
+
+		new MyWebService(getActivity(), listener, "GET", url).execute();
 
 		for (int i = 0; i < txt.length; i++) {
 			MyListDiseasesItem data = new MyListDiseasesItem();
@@ -83,7 +93,7 @@ public class ListDiseasesActivity extends AppCompatActivity {
 		}
 
 		CustomListDiseases custom_adapter = new CustomListDiseases(
-				getApplicationContext(), R.layout.activity_list_diseases, items);
+				getActivity(), R.layout.activity_list_diseases, items);
 		adapter = custom_adapter;
 		lv_menu.setAdapter(custom_adapter);
 
@@ -91,7 +101,7 @@ public class ListDiseasesActivity extends AppCompatActivity {
 
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
+									  int count) {
 				String search = et_search.getText().toString();
 				int txtlength = search.length();
 				if (n_item != null) {
@@ -125,7 +135,7 @@ public class ListDiseasesActivity extends AppCompatActivity {
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
+										  int after) {
 				// TODO Auto-generated method stub
 
 			}
@@ -140,10 +150,10 @@ public class ListDiseasesActivity extends AppCompatActivity {
 		lv_menu.setOnItemClickListener(new OnItemClickListener() {
 
 			public void onItemClick(AdapterView<?> parent, View view,
-					int position, long id) {
+									int position, long id) {
 				// Toast.makeText(getApplicationContext(), "List : "+position,
 				// Toast.LENGTH_LONG).show();
-				Intent intent = new Intent(getApplicationContext(),
+				Intent intent = new Intent(getActivity(),
 						Data_diseasesActivity.class);
 				intent.putExtra("text1", items.get(position).getText());
 				intent.putExtra("text2", "position : " + position);
@@ -151,31 +161,14 @@ public class ListDiseasesActivity extends AppCompatActivity {
 
 			}
 		});
+
+		return view;
 	}
 
-	private void setWidget() {
+	private void setWidget(View view) {
 		// TODO Auto-generated method stub
-		lv_menu = (ListView) findViewById(R.id.listView_diseases_listdiseases);
-		et_search = (EditText) findViewById(R.id.editText_search_diseases);
+		lv_menu = (ListView) view.findViewById(R.id.listView_diseases_listdiseases);
+		et_search = (EditText) view.findViewById(R.id.editText_search_diseases);
 
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.list_diseases, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			onBackPressed();
-		}
-		return super.onOptionsItemSelected(item);
 	}
 }

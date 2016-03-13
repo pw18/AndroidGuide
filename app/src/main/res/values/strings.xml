@@ -17,5 +17,11 @@
     <string name="title_activity_data_pharmaceutical">Data_pharmaceuticalActivity</string>
     <string name="title_activity_data_medicinetraditional">Data_medicinetraditionalActivity</string>
     <string name="title_activity_data_aid">Data_aidActivity</string>
+    <string name="title_activity_main_menu">MainMenuActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="test">test</string>
 
 </resources>

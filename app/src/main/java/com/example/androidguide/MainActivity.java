@@ -1,6 +1,5 @@
 package com.example.androidguide;
 
-import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -26,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         
     @Override
 	public void run() {
-    	Intent intent = new Intent(getApplicationContext(), ManuActivity.class);
+    	Intent intent = new Intent(getApplicationContext(), MainMenuActivity.class);
 	startActivity(intent);
 	finish();
 }

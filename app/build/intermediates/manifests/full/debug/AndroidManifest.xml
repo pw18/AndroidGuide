@@ -26,56 +26,47 @@
         </activity>
         <activity
             android:name="com.example.androidguide.ManuActivity"
-            android:label="@string/title_activity_manu" >
-        </activity>
+            android:label="@string/title_activity_manu" />
         <activity
             android:name="com.example.androidguide.ListDiseasesActivity"
-            android:label="@string/title_activity_list_diseases" >
-        </activity>
+            android:label="@string/title_activity_list_diseases" />
         <activity
             android:name="com.example.androidguide.PharmaceuticalActivity"
-            android:label="@string/title_activity_pharmaceutical" >
-        </activity>
+            android:label="@string/title_activity_pharmaceutical" />
         <activity
             android:name="com.example.androidguide.AIDActivity"
-            android:label="@string/title_activity_aid" >
-        </activity>
+            android:label="@string/title_activity_aid" />
         <activity
             android:name="com.example.androidguide.HospitalActivity"
-            android:label="@string/title_activity_hospital" >
-        </activity>
+            android:label="@string/title_activity_hospital" />
         <activity
             android:name="com.example.androidguide.AboutUsActivity"
-            android:label="@string/title_activity_about_us" >
-        </activity>
+            android:label="@string/title_activity_about_us" />
         <activity
             android:name="com.example.androidguide.MedicineTraditionalActivity"
-            android:label="@string/title_activity_medicine_traditional" >
-        </activity>
+            android:label="@string/title_activity_medicine_traditional" />
         <activity
             android:name="com.example.androidguide.ListHospitalActivity"
-            android:label="@string/title_activity_list_hospital" >
-        </activity>
+            android:label="@string/title_activity_list_hospital" />
         <activity
             android:name="com.example.androidguide.AdminActivity"
-            android:label="@string/title_activity_admin" >
-        </activity>
+            android:label="@string/title_activity_admin" />
         <activity
             android:name="com.example.androidguide.Data_diseasesActivity"
-            android:label="@string/title_activity_data_diseases" >
-        </activity>
+            android:label="@string/title_activity_data_diseases" />
         <activity
             android:name="com.example.androidguide.Data_pharmaceuticalActivity"
-            android:label="@string/title_activity_data_pharmaceutical" >
-        </activity>
+            android:label="@string/title_activity_data_pharmaceutical" />
         <activity
             android:name="com.example.androidguide.Data_medicinetraditionalActivity"
-            android:label="@string/title_activity_data_medicinetraditional" >
-        </activity>
+            android:label="@string/title_activity_data_medicinetraditional" />
         <activity
             android:name="com.example.androidguide.Data_aidActivity"
-            android:label="@string/title_activity_data_aid" >
-        </activity>
+            android:label="@string/title_activity_data_aid" />
+        <activity
+            android:name="com.example.androidguide.MainMenuActivity"
+            android:label="@string/title_activity_main_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
