@@ -1,6 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
-        "source": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\iconappandroidguide.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\mipmap-hdpi\\iconappandroidguide.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     }
 ]

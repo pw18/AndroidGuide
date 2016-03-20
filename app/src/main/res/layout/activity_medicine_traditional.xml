@@ -26,8 +26,8 @@
 
         <ImageView
             android:id="@+id/imageView_iconhospital"
-            android:layout_width="65dp"
-            android:layout_height="78dp"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
             android:maxHeight="50dp"
             android:maxWidth="50dp"
             android:scaleType="fitXY"

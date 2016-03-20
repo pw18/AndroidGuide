@@ -4,5 +4,13 @@
     <string name="app_name">AndroidGuide</string>
 
     <string name="test">ทดสอบ</string>
+    <string name="strGlobalDiseases">รายชื่อโรค</string>
+    <string name="strGlobalMedicineModern">ยาแผนปัจจุบัน</string>
+    <string name="strGlobalMedicineTraditional">ยาแผนโบราณ</string>
+    <string name="strGlobalFirstAid">การปฐมพยาบาล</string>
+    <string name="strGlobalHospital">โรงพยาบาล</string>
+    <string name="strGlobalAboutDeveloper">ข้อมูลผู้พัฒนา</string>
+
+
 
 </resources>

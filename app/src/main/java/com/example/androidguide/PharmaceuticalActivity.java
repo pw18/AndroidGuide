@@ -22,6 +22,7 @@ import java.util.ArrayList;
 
 
 public class PharmaceuticalActivity extends Fragment {
+
 	ArrayAdapter<MyListPharmaceuticalItem> adapter;
 	ListView lv_menu;
 	EditText et_search;

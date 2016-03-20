@@ -1,66 +1,66 @@
 [
     {
-        "merged": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\hospital.xml",
-        "source": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\src\\main\\res\\menu\\hospital.xml"
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\hospital.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\menu\\hospital.xml"
     },
     {
-        "merged": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\data_aid.xml",
-        "source": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\src\\main\\res\\menu\\data_aid.xml"
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\about_us.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\menu\\about_us.xml"
     },
     {
-        "merged": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\data_medicinetraditional.xml",
-        "source": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\src\\main\\res\\menu\\data_medicinetraditional.xml"
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_main_menu_drawer.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\menu\\activity_main_menu_drawer.xml"
     },
     {
-        "merged": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_main_menu_drawer.xml",
-        "source": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\src\\main\\res\\menu\\activity_main_menu_drawer.xml"
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\list_hospital.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\menu\\list_hospital.xml"
     },
     {
-        "merged": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\pharmaceutical.xml",
-        "source": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\src\\main\\res\\menu\\pharmaceutical.xml"
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\manu.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\menu\\manu.xml"
     },
     {
-        "merged": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\about_us.xml",
-        "source": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\src\\main\\res\\menu\\about_us.xml"
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main_menu.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\menu\\main_menu.xml"
     },
     {
-        "merged": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
-        "source": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\src\\main\\res\\menu\\main.xml"
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\data_diseases.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\menu\\data_diseases.xml"
     },
     {
-        "merged": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\list_diseases.xml",
-        "source": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\src\\main\\res\\menu\\list_diseases.xml"
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\data_medicinetraditional.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\menu\\data_medicinetraditional.xml"
     },
     {
-        "merged": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\list_hospital.xml",
-        "source": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\src\\main\\res\\menu\\list_hospital.xml"
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\data_aid.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\menu\\data_aid.xml"
     },
     {
-        "merged": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\data_pharmaceutical.xml",
-        "source": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\src\\main\\res\\menu\\data_pharmaceutical.xml"
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\list_diseases.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\menu\\list_diseases.xml"
     },
     {
-        "merged": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main_menu.xml",
-        "source": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\src\\main\\res\\menu\\main_menu.xml"
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\medicine_traditional.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\menu\\medicine_traditional.xml"
     },
     {
-        "merged": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\admin.xml",
-        "source": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\src\\main\\res\\menu\\admin.xml"
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\pharmaceutical.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\menu\\pharmaceutical.xml"
     },
     {
-        "merged": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\data_diseases.xml",
-        "source": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\src\\main\\res\\menu\\data_diseases.xml"
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\data_pharmaceutical.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\menu\\data_pharmaceutical.xml"
     },
     {
-        "merged": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\manu.xml",
-        "source": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\src\\main\\res\\menu\\manu.xml"
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\aid.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\menu\\aid.xml"
     },
     {
-        "merged": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\aid.xml",
-        "source": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\src\\main\\res\\menu\\aid.xml"
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\menu\\main.xml"
     },
     {
-        "merged": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\medicine_traditional.xml",
-        "source": "C:\\Users\\w.issarapanit\\Desktop\\project_b\\AndroidGuide\\app\\src\\main\\res\\menu\\medicine_traditional.xml"
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\menu\\admin.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\menu\\admin.xml"
     }
 ]

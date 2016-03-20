@@ -73,17 +73,20 @@ public class MainMenuActivity extends AppCompatActivity
         int id = item.getItemId();
         Fragment fragment = null;
         Intent intent = null;
-        if (id == R.id.nav_camera) {
+        if (id == R.id.menu_diseases) {
             // Handle the camera action
             fragment = ListDiseasesActivity.newInstance();
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.menu_medmodern) {
             fragment = PharmaceuticalActivity.newInstance();
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.menu_medtraditional) {
             fragment = MedicineTraditionalActivity.newInstance();
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.menu_firstaid) {
             fragment = AIDActivity.newInstance();
+        } else if (id == R.id.menu_hospital) {
+            fragment = HospitalActivity.newInstance();
+        }else if (id == R.id.menu_developer) {
+            fragment = AboutUsActivity.newInstance();
         }
-
 //        startActivity(intent);
         FragmentManager manager = getSupportFragmentManager();
         if(fragment != null) {

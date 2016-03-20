@@ -2271,17 +2271,23 @@ containing a value of this type.
         public static final int bac1=0x7f02004b;
         public static final int design_fab_background=0x7f02004c;
         public static final int design_snackbar_background=0x7f02004d;
-        public static final int ic_menu_camera=0x7f02004e;
-        public static final int ic_menu_gallery=0x7f02004f;
-        public static final int ic_menu_manage=0x7f020050;
-        public static final int ic_menu_send=0x7f020051;
-        public static final int ic_menu_share=0x7f020052;
-        public static final int ic_menu_slideshow=0x7f020053;
-        public static final int information1=0x7f020054;
-        public static final int logo1=0x7f020055;
-        public static final int notification_template_icon_bg=0x7f020058;
-        public static final int side_nav_bar=0x7f020056;
-        public static final int tree1=0x7f020057;
+        public static final int ic_developer=0x7f02004e;
+        public static final int ic_diseases=0x7f02004f;
+        public static final int ic_firstaid=0x7f020050;
+        public static final int ic_hospital=0x7f020051;
+        public static final int ic_medmodern=0x7f020052;
+        public static final int ic_medtraditional=0x7f020053;
+        public static final int ic_menu_camera=0x7f020054;
+        public static final int ic_menu_gallery=0x7f020055;
+        public static final int ic_menu_manage=0x7f020056;
+        public static final int ic_menu_send=0x7f020057;
+        public static final int ic_menu_share=0x7f020058;
+        public static final int ic_menu_slideshow=0x7f020059;
+        public static final int information1=0x7f02005a;
+        public static final int logo1=0x7f02005b;
+        public static final int notification_template_icon_bg=0x7f02005e;
+        public static final int side_nav_bar=0x7f02005c;
+        public static final int tree1=0x7f02005d;
     }
     public static final class id {
         public static final int LinearLayout1=0x7f0c0069;
@@ -2368,13 +2374,15 @@ containing a value of this type.
         public static final int listView_pharmaceutical_listdiseases=0x7f0c0091;
         public static final int list_item=0x7f0c0041;
         public static final int media_actions=0x7f0c00a8;
+        public static final int menu_developer=0x7f0c00b8;
+        public static final int menu_diseases=0x7f0c00b3;
+        public static final int menu_firstaid=0x7f0c00b6;
+        public static final int menu_hospital=0x7f0c00b7;
+        public static final int menu_medmodern=0x7f0c00b4;
+        public static final int menu_medtraditional=0x7f0c00b5;
         public static final int middle=0x7f0c0032;
         public static final int mini=0x7f0c0030;
         public static final int multiply=0x7f0c0027;
-        public static final int nav_camera=0x7f0c00b3;
-        public static final int nav_gallery=0x7f0c00b4;
-        public static final int nav_manage=0x7f0c00b6;
-        public static final int nav_slideshow=0x7f0c00b5;
         public static final int nav_view=0x7f0c008b;
         public static final int navigation_header_container=0x7f0c009e;
         public static final int never=0x7f0c0036;
@@ -2572,6 +2580,7 @@ containing a value of this type.
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;
+        public static final int iconappandroidguide=0x7f030001;
     }
     public static final class string {
         public static final int abc_action_bar_home_description=0x7f060000;
@@ -2593,30 +2602,36 @@ containing a value of this type.
         public static final int abc_shareactionprovider_share_with=0x7f060010;
         public static final int abc_shareactionprovider_share_with_application=0x7f060011;
         public static final int abc_toolbar_collapse_description=0x7f060012;
-        public static final int action_settings=0x7f060016;
+        public static final int action_settings=0x7f06001c;
         public static final int app_name=0x7f060014;
-        public static final int appbar_scrolling_view_behavior=0x7f060017;
-        public static final int bottom_sheet_behavior=0x7f060018;
-        public static final int character_counter_pattern=0x7f060019;
-        public static final int hello_world=0x7f06001a;
-        public static final int navigation_drawer_close=0x7f06001b;
-        public static final int navigation_drawer_open=0x7f06001c;
+        public static final int appbar_scrolling_view_behavior=0x7f06001d;
+        public static final int bottom_sheet_behavior=0x7f06001e;
+        public static final int character_counter_pattern=0x7f06001f;
+        public static final int hello_world=0x7f060020;
+        public static final int navigation_drawer_close=0x7f060021;
+        public static final int navigation_drawer_open=0x7f060022;
         public static final int status_bar_notification_info_overflow=0x7f060013;
-        public static final int test=0x7f060015;
-        public static final int title_activity_about_us=0x7f06001d;
-        public static final int title_activity_admin=0x7f06001e;
-        public static final int title_activity_aid=0x7f06001f;
-        public static final int title_activity_data_aid=0x7f060020;
-        public static final int title_activity_data_diseases=0x7f060021;
-        public static final int title_activity_data_medicinetraditional=0x7f060022;
-        public static final int title_activity_data_pharmaceutical=0x7f060023;
-        public static final int title_activity_hospital=0x7f060024;
-        public static final int title_activity_list_diseases=0x7f060025;
-        public static final int title_activity_list_hospital=0x7f060026;
-        public static final int title_activity_main_menu=0x7f060027;
-        public static final int title_activity_manu=0x7f060028;
-        public static final int title_activity_medicine_traditional=0x7f060029;
-        public static final int title_activity_pharmaceutical=0x7f06002a;
+        public static final int strGlobalAboutDeveloper=0x7f060015;
+        public static final int strGlobalDiseases=0x7f060016;
+        public static final int strGlobalFirstAid=0x7f060017;
+        public static final int strGlobalHospital=0x7f060018;
+        public static final int strGlobalMedicineModern=0x7f060019;
+        public static final int strGlobalMedicineTraditional=0x7f06001a;
+        public static final int test=0x7f06001b;
+        public static final int title_activity_about_us=0x7f060023;
+        public static final int title_activity_admin=0x7f060024;
+        public static final int title_activity_aid=0x7f060025;
+        public static final int title_activity_data_aid=0x7f060026;
+        public static final int title_activity_data_diseases=0x7f060027;
+        public static final int title_activity_data_medicinetraditional=0x7f060028;
+        public static final int title_activity_data_pharmaceutical=0x7f060029;
+        public static final int title_activity_hospital=0x7f06002a;
+        public static final int title_activity_list_diseases=0x7f06002b;
+        public static final int title_activity_list_hospital=0x7f06002c;
+        public static final int title_activity_main_menu=0x7f06002d;
+        public static final int title_activity_manu=0x7f06002e;
+        public static final int title_activity_medicine_traditional=0x7f06002f;
+        public static final int title_activity_pharmaceutical=0x7f060030;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f090089;

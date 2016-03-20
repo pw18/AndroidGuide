@@ -3,21 +3,30 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="test1" />
+            android:id="@+id/menu_diseases"
+            android:icon="@drawable/ic_diseases"
+            android:title="@string/strGlobalDiseases" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="test2" />
+            android:id="@+id/menu_medmodern"
+            android:icon="@drawable/ic_medmodern"
+            android:title="@string/strGlobalMedicineModern" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="test3" />
+            android:id="@+id/menu_medtraditional"
+            android:icon="@drawable/ic_medtraditional"
+            android:title="@string/strGlobalMedicineTraditional" />
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="test4" />
+            android:id="@+id/menu_firstaid"
+            android:icon="@drawable/ic_firstaid"
+            android:title="@string/strGlobalFirstAid" />
+        <item
+            android:id="@+id/menu_hospital"
+            android:icon="@drawable/ic_hospital"
+            android:title="@string/strGlobalHospital" />
+        <item
+            android:id="@+id/menu_developer"
+            android:icon="@drawable/ic_developer"
+            android:title="@string/strGlobalAboutDeveloper" />
+
     </group>
 
 </menu>

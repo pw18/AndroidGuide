@@ -292,6 +292,12 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="strGlobalAboutDeveloper">About Developer</string>
+    <string name="strGlobalDiseases">Diseases</string>
+    <string name="strGlobalFirstAid">First Aid</string>
+    <string name="strGlobalHospital">Hospital</string>
+    <string name="strGlobalMedicineModern">Medicine Modern</string>
+    <string name="strGlobalMedicineTraditional">Medicine Traditional</string>
     <string name="test">test</string>
     <string name="title_activity_about_us">AboutUsActivity</string>
     <string name="title_activity_admin">AdminActivity</string>

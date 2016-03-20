@@ -23,5 +23,14 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="test">test</string>
+    <string name="strGlobalDiseases">Diseases</string>
+    <string name="strGlobalMedicineModern">Medicine Modern</string>
+    <string name="strGlobalMedicineTraditional">Medicine Traditional</string>
+    <string name="strGlobalFirstAid">First Aid</string>
+    <string name="strGlobalHospital">Hospital</string>
+    <string name="strGlobalAboutDeveloper">About Developer</string>
+
+
+
 
 </resources>

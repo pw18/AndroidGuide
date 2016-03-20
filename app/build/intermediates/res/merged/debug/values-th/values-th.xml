@@ -21,5 +21,11 @@
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"ยุบ"</string>
     <string name="app_name">AndroidGuide</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="strGlobalAboutDeveloper">ข้อมูลผู้พัฒนา</string>
+    <string name="strGlobalDiseases">รายชื่อโรค</string>
+    <string name="strGlobalFirstAid">การปฐมพยาบาล</string>
+    <string name="strGlobalHospital">โรงพยาบาล</string>
+    <string name="strGlobalMedicineModern">ยาแผนปัจจุบัน</string>
+    <string name="strGlobalMedicineTraditional">ยาแผนโบราณ</string>
     <string name="test">ทดสอบ</string>
 </resources>
