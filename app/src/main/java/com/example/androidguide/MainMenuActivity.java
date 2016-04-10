@@ -1,5 +1,6 @@
 package com.example.androidguide;
 
+import android.content.ContextWrapper;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -11,8 +12,14 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 public class MainMenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -72,9 +79,7 @@ public class MainMenuActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         Fragment fragment = null;
-        Intent intent = null;
         if (id == R.id.menu_diseases) {
-            // Handle the camera action
             fragment = ListDiseasesActivity.newInstance();
         } else if (id == R.id.menu_medmodern) {
             fragment = PharmaceuticalActivity.newInstance();
@@ -84,12 +89,16 @@ public class MainMenuActivity extends AppCompatActivity
             fragment = AIDActivity.newInstance();
         } else if (id == R.id.menu_hospital) {
             fragment = HospitalActivity.newInstance();
-        }else if (id == R.id.menu_developer) {
+        } else if (id == R.id.menu_developer) {
             fragment = AboutUsActivity.newInstance();
+        } else if (id == R.id.menu_copydb) {
+            fragment = null;
+            ContextWrapper cw = new ContextWrapper(getApplicationContext());
+            String DB_PATH = cw.getFilesDir().getAbsolutePath() + "/databases/"; //edited to databases
+            copyDataBase(DB_PATH);
         }
-//        startActivity(intent);
         FragmentManager manager = getSupportFragmentManager();
-        if(fragment != null) {
+        if (fragment != null) {
             FragmentTransaction transaction = manager.beginTransaction().replace(R.id.content, fragment);
             transaction.commit();
         }
@@ -97,5 +106,30 @@ public class MainMenuActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void copyDataBase(String path) {
+        byte[] buffer = new byte[1024];
+        OutputStream myOutput = null;
+        int length;
+        // Open your local db as the input stream
+        InputStream myInput = null;
+        try {
+            String DB_NAME = "mydatabase.db";
+            myInput = getAssets().open(DB_NAME);
+            // transfer bytes from the inputfile to the
+            // outputfile
+            myOutput = new FileOutputStream(path);
+            while ((length = myInput.read(buffer)) > 0) {
+                myOutput.write(buffer, 0, length);
+            }
+            myOutput.close();
+            myOutput.flush();
+            myInput.close();
+            Log.d("test", "success");
+        } catch (IOException e) {
+            e.printStackTrace();
+            Log.d("test", "failed");
+        }
     }
 }

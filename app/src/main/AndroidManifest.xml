@@ -4,6 +4,8 @@
     android:versionCode="1"
     android:versionName="1.0">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -31,16 +33,16 @@
             android:name=".AdminActivity"
             android:label="@string/title_activity_admin"></activity>
         <activity
-            android:name=".Data_diseasesActivity"
+            android:name=".DataDiseasesActivity"
             android:label="@string/title_activity_data_diseases"></activity>
         <activity
-            android:name=".Data_pharmaceuticalActivity"
+            android:name=".DataPharmaceuticalActivity"
             android:label="@string/title_activity_data_pharmaceutical"></activity>
         <activity
-            android:name=".Data_medicinetraditionalActivity"
+            android:name=".DataMedicinetraditionalActivity"
             android:label="@string/title_activity_data_medicinetraditional"></activity>
         <activity
-            android:name=".Data_aidActivity"
+            android:name=".DataAidActivity"
             android:label="@string/title_activity_data_aid"></activity>
         <activity
             android:name=".MainMenuActivity"

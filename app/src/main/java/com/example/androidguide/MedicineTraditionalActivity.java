@@ -25,10 +25,8 @@ public class MedicineTraditionalActivity extends Fragment {
 	ArrayAdapter<MyListMedicineTraditionalItem> adapter;
 	ListView lv_menu;
 	EditText et_search;
-	
-	String[] txt = {"�����л�������ѡ�ʺ","�ô�����͹","��ҡ","����͹","����ԧ","����Ѵ","�����������¹","�����ҷ������������","�����ҷ�����","�����","��ͧ�١","��ͧ��ǧ","�Ǵ��Ш���͹","�Ǵ�ѹ"
-			,"�Ǵ��������ù","�žؾͧ","�����","����͹�","���˹ѧ�ѡ�ʺ�ҡ�����ŧ","���ѡ�ʺ�Դ����","��㹡����������","��Ҹ�","����","���ʹ�������","�����","���ʹ�͡����ÿѹ","���¹�����"
-			,"�Ѵ","�Ѵ�����ѹ	","�Դ"};
+	String[] txt;
+
 	
 	ArrayList<MyListMedicineTraditionalItem> items;
 	ArrayList<MyListMedicineTraditionalItem> n_item;
@@ -46,6 +44,40 @@ public class MedicineTraditionalActivity extends Fragment {
 	@Override
 	public void onCreate(@Nullable Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
+		txt = new String[]{
+				getResources().getString(R.string.strCystitis),
+				getResources().getString(R.string.strGastroesophagealRefluxDisease),
+				getResources().getString(R.string.strTineaCorporis),
+				getResources().getString(R.string.strTineaVesicolor),
+				getResources().getString(R.string.strHordeolum),
+				getResources().getString(R.string.strCommonCold),
+				getResources().getString(R.string.strNauseaVomitting),
+				getResources().getString(R.string.strTineapedis),
+				getResources().getString(R.string.strTineaungium),
+				getResources().getString(R.string.strLeukorrhea),
+				getResources().getString(R.string.strConstipation),
+				getResources().getString(R.string.strDiarrhea),
+				getResources().getString(R.string.strDysmenorrhea),
+				getResources().getString(R.string.strToothache),
+				getResources().getString(R.string.strMigraine),
+				getResources().getString(R.string.strImpetigo),
+				getResources().getString(R.string.strEczema),
+				getResources().getString(R.string.strAphthousUlcer),
+				getResources().getString(R.string.strPoisoningfromPesticides),
+				getResources().getString(R.string.strSuppurativeWoundInfection),
+				getResources().getString(R.string.strPepticUlcer),
+				getResources().getString(R.string.strGnathostomiasis),
+				getResources().getString(R.string.strHerpesSimplex),
+				getResources().getString(R.string.strEpistaxis),
+				getResources().getString(R.string.strUrticaria),
+				getResources().getString(R.string.strGingivalBleeding),
+				getResources().getString(R.string.strVertigo),
+				getResources().getString(R.string.strMeasles),
+				getResources().getString(R.string.strGermanMeasles),
+				getResources().getString(R.string.strScabiasis)
+		};
+
 	}
 
 	@Nullable
@@ -122,7 +154,7 @@ public class MedicineTraditionalActivity extends Fragment {
 			public void onItemClick(AdapterView<?> parent, View view,
 									int position, long id) {
 				//Toast.makeText(getApplicationContext(), "List : "+position, Toast.LENGTH_LONG).show();
-				Intent intent = new Intent(getActivity(), Data_medicinetraditionalActivity.class);
+				Intent intent = new Intent(getActivity(), DataMedicinetraditionalActivity.class);
 				intent.putExtra("text1", txt[position]);
 				intent.putExtra("text2", "position : " + position);
 				startActivity(intent);

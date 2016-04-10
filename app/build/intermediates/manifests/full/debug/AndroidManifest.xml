@@ -8,6 +8,8 @@
         android:minSdkVersion="15"
         android:targetSdkVersion="23" />
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -35,16 +37,16 @@
             android:name="com.example.androidguide.AdminActivity"
             android:label="@string/title_activity_admin" />
         <activity
-            android:name="com.example.androidguide.Data_diseasesActivity"
+            android:name="com.example.androidguide.DataDiseasesActivity"
             android:label="@string/title_activity_data_diseases" />
         <activity
-            android:name="com.example.androidguide.Data_pharmaceuticalActivity"
+            android:name="com.example.androidguide.DataPharmaceuticalActivity"
             android:label="@string/title_activity_data_pharmaceutical" />
         <activity
-            android:name="com.example.androidguide.Data_medicinetraditionalActivity"
+            android:name="com.example.androidguide.DataMedicinetraditionalActivity"
             android:label="@string/title_activity_data_medicinetraditional" />
         <activity
-            android:name="com.example.androidguide.Data_aidActivity"
+            android:name="com.example.androidguide.DataAidActivity"
             android:label="@string/title_activity_data_aid" />
         <activity
             android:name="com.example.androidguide.MainMenuActivity"

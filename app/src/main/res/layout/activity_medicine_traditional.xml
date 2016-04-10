@@ -13,7 +13,7 @@
         android:id="@+id/editText_search_medicinetraditional"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawableLeft="@android:drawable/ic_search_category_default"
+        android:drawableLeft="@android:drawable/ic_menu_search"
         android:ems="10"
         android:hint="ค้นหาชื่อโรค" >
 
@@ -26,12 +26,10 @@
 
         <ImageView
             android:id="@+id/imageView_iconhospital"
-            android:layout_width="72dp"
-            android:layout_height="72dp"
-            android:maxHeight="50dp"
-            android:maxWidth="50dp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
             android:scaleType="fitXY"
-            android:src="@drawable/tree1" />
+            android:src="@drawable/ic_medtraditional" />
 
         <TextView
             android:id="@+id/textView_listpharmaceutical"

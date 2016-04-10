@@ -11,6 +11,126 @@
     <string name="strGlobalHospital">โรงพยาบาล</string>
     <string name="strGlobalAboutDeveloper">ข้อมูลผู้พัฒนา</string>
 
+    <string name="strCystitis">กระเพาะปัสสาวะอักเสบ</string>
+    <string name="strGastroesophagealRefluxDisease">กรดไหลย้อน</string>
+    <string name="strTineaCorporis">กลาก</string>
+    <string name="strTineaVesicolor">เกลื้อน</string>
+    <string name="strHordeolum">ตากุ้งยิง</string>
+    <string name="strCommonCold">ไข้หวัด</string>
+    <string name="strNauseaVomitting">คลื่นไส้อาเจียน</string>
+    <string name="strTineapedis">เชื้อราที่ง่ามนิ้วเท้า</string>
+    <string name="strTineaungium">เชื้อราที่เล็บ</string>
+    <string name="strLeukorrhea">ตกขาว</string>
+    <string name="strConstipation">ท้องผูก</string>
+    <string name="strDiarrhea">ท้องร่วง</string>
+    <string name="strDysmenorrhea">ปวดประจำเดือน</string>
+    <string name="strToothache">ปวดฟัน</string>
+    <string name="strMigraine">ปวดศรีษะไมเกรน</string>
+    <string name="strImpetigo">แผลพุพอง</string>
+    <string name="strEczema">ผื่นแพ้</string>
+    <string name="strAphthousUlcer">แผลร้อนใน</string>
+    <string name="strPoisoningfromPesticides">ผิวหนังอักเสบจากพิษแมลง</string>
+    <string name="strSuppurativeWoundInfection">แผลอักเสบติดเชื้อ</string>
+    <string name="strPepticUlcer">แผลในกระเพาะอาหาร</string>
+    <string name="strGnathostomiasis">พยาธิ</string>
+    <string name="strHerpesSimplex">เริม</string>
+    <string name="strEpistaxis">เลือดกำเดาไหล</string>
+    <string name="strUrticaria">ลมพิษ</string>
+    <string name="strGingivalBleeding">เลือดออกตามไรฟัน</string>
+    <string name="strVertigo">เวียนศรีษะ</string>
+    <string name="strMeasles">หัด</string>
+    <string name="strScabiasis">หิด</string>
+    <string name="strGermanMeasles">หัดเยอรมัน</string>
+
+
+    <string name="strProvinceBangkok">จังหวัดกรุงเทพ</string>
+    <string name="strProvinceNonthaburi">จังหวัดนนทบุรี</string>
+    <string name="strProvincePathumThani">จังหวัดปทุมธานี</string>
+    <string name="strProvinceSamutPrakan">จังหวัดสมุทรปราการ</string>
+    <string name="strProvinceKamphaengPhet">จังหวัดกำแพงเพชร</string>
+    <string name="strProvinceChainat">จังหวัดชัยนาท</string>
+    <string name="strProvinceNakhonNayok">จังหวัดนครนายก</string>
+    <string name="strProvinceNakhonPathom">จังหวัดนครปฐม</string>
+    <string name="strProvinceNakhonSawan">จังหวัดนครสวรรค์</string>
+    <string name="strProvincePhraNakhonSriAyutthaya">จังหวัดพระนครศรีอยุธยา</string>
+    <string name="strProvincePichit">จังหวัดพิจิตร</string>
+    <string name="strProvincePhitsanulok">จังหวัดพิษณุโลก </string>
+    <string name="strProvincePhetchabun">จังหวัดเพชรบูรณ์</string>
+    <string name="strProvinceLopburi">จังหวัดลพบุรี</string>
+    <string name="strProvinceSamutSongkhram">จังหวัดสมุทรสงคราม</string>
+    <string name="strProvinceSamutsakorn">จังหวัดสมุทรสาคร</string>
+    <string name="strProvinceSingburi">จังหวัดสิงห์บุรี</string>
+    <string name="strProvinceSukhothai">จังหวัดสุโขทัย</string>
+    <string name="strProvinceSuphanBuri">จังหวัดสุพรรณบุรี</string>
+    <string name="strProvinceSaraburi">จังหวัดสระบุรี</string>
+    <string name="strProvinceAngThong">จังหวัดอ่างทอง</string>
+    <string name="strProvinceUthaiThani">จังหวัดอุทัยธานี</string>
+    <string name="strProvinceChiangRai">จังหวัดเชียงราย</string>
+    <string name="strProvinceChiangMai">จังหวัดเชียงใหม่</string>
+    <string name="strProvinceNan">จังหวัดน่าน</string>
+    <string name="strProvincePayao">จังหวัดพะเยา</string>
+    <string name="strProvincePhrae">จังหวัดแพร่</string>
+    <string name="strProvinceMaeHongSon">จังหวัดแม่ฮ่องสอน</string>
+    <string name="strProvinceLampang">จังหวัดลำปาง</string>
+    <string name="strProvinceLamphun">จังหวัดลำพูน</string>
+    <string name="strProvinceUttaradit">จังหวัดอุตรดิตถ์</string>
+    <string name="strProvinceChanthaburi">จังหวัดจันทรบุรี</string>
+    <string name="strProvinceChachoengsao">จังหวัดฉะเชิงเทรา</string>
+    <string name="strProvinceChonBuri">จังหวัดชลบุรี</string>
+    <string name="strProvinceTrad">จังหวัดตราต</string>
+    <string name="strProvincePrachinburi">จังหวัดปราจีนบุรี</string>
+    <string name="strProvinceRayong">จังหวัดระยอง</string>
+    <string name="strProvinceSaKaeo">จังหวัดสระแก้ว</string>
+    <string name="strProvinceKanchanaburi">จังหวัดกาญจนบุรี</string>
+    <string name="strProvinceTak">จังหวัดตาก</string>
+    <string name="strProvincePrachuapKhiriKhan">จังหวัดประจวบคีรีขันธ์</string>
+    <string name="strProvincePhetchaburi">จังหวัดเพชรบุรี</string>
+    <string name="strProvinceRatchaburi">จังหวัดราชบุรี</string>
+    <string name="strProvinceKrabi">จังหวัดกระบี่</string>
+    <string name="strProvinceChumphon">จังหวัดชุมพร</string>
+    <string name="strProvinceTrang">จังหวัดตรัง</string>
+    <string name="strProvinceNakhonSiThammarat">จังหวัดนครศรีธรรมราช</string>
+    <string name="strProvinceNarathiwat">จังหวัดนราธิวาส</string>
+    <string name="strProvincePattani">จังหวัดปัตตานี</string>
+    <string name="strProvincePhangnga">จังหวัดพังงา</string>
+    <string name="strProvincePhatthalung">จังหวัดพัทลุง</string>
+    <string name="strProvincePhuket">จังหวัดภูเก็ต</string>
+    <string name="strProvinceRanong">จังหวัดระนอง</string>
+    <string name="strProvinceSatun">จังหวัดสตูล</string>
+    <string name="strProvinceSongkhla">จังหวัดสงขลา</string>
+    <string name="strProvinceSuratThani">จังหวัดสุราษฏร์ธานี</string>
+    <string name="strProvinceYala">จังหวัดยะลา</string>
+    <string name="strProvinceKalasin">จังหวัดกาฬสินธุ์</string>
+    <string name="strProvinceKhonKaen">จังหวัดขอนแก่น</string>
+    <string name="strProvinceChaiyaphum">จังหวัดชัยภูมิ</string>
+    <string name="strProvinceNakhonPhanom">จังหวัดนครพนม</string>
+    <string name="strProvinceNakhonRatchasima">จังหวัดนครราชสีมา</string>
+    <string name="strProvinceBungKan">จังหวัดบึงกาฬ</string>
+    <string name="strProvinceBuriram">จังหวัดบุรีรัมย์</string>
+    <string name="strProvinceMahaSarakham">จังหวัดมหาสารคาม</string>
+    <string name="strProvinceMukdahan">จังหวัดมุกดาหาร</string>
+    <string name="strProvinceYasothon">จังหวัดยโสธร</string>
+    <string name="strProvinceRoiEt">จังหวัดร้อยเอ็ด</string>
+    <string name="strProvinceLoei">จังหวัดเลย</string>
+    <string name="strProvinceSakonNakhon">จังหวัดสกลนคร</string>
+    <string name="strProvinceSurin">จังหวัดสุรินทร์</string>
+    <string name="strProvinceSisaket">จังหวัดศรีษะเกษ</string>
+    <string name="strProvinceNongkhai">จังหวัดหนองคาย</string>
+    <string name="strProvinceNongbualamphu">จังหวัดหนองบัวลำภู</string>
+    <string name="strProvinceUdonThani">จังหวัดอุดรธานี</string>
+    <string name="strProvinceUbonRatchathani">จังหวัดอุบลราชธานี</string>
+    <string name="strProvinceAmnatCharoen">จังหวัดอำนาจเจริญ</string>
+
+
+
+
+
+
+
+
+
+
+
 
 
 </resources>

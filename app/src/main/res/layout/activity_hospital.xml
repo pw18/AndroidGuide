@@ -16,11 +16,11 @@
 
         <ImageView
             android:id="@+id/imageView_iconhospital"
-            android:layout_width="84dp"
-            android:layout_height="100dp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
             android:maxHeight="50dp"
             android:maxWidth="50dp"
-            android:src="@android:drawable/ic_input_add" />
+            android:src="@drawable/ic_hospital" />
 
         <TextView
             android:id="@+id/textView_hotpital_listprovince"
