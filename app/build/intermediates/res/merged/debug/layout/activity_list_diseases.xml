@@ -44,10 +44,10 @@
 
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/listView_diseases_listdiseases"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView_diseases_listdiseases"
+        android:scrollbars="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-    </ListView>
+        android:layout_height="match_parent"/>
 
 </LinearLayout>

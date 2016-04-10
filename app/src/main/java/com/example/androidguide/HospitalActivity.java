@@ -150,17 +150,17 @@ public class HospitalActivity extends Fragment implements AdapterView.OnItemSele
 
 	@Override
 	public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-		switch (parent.getId()){
-			case R.id.spinner_hosrealm:
-				if(position == 0)
-					Toast.makeText(getActivity(), "Test", Toast.LENGTH_SHORT).show();
-				else if(position == 1)
-					Toast.makeText(getActivity(), "Test1", Toast.LENGTH_SHORT).show();
-				break;
-			case R.id.spinner_hosbkk:
-				Toast.makeText(getActivity(), "Test11111", Toast.LENGTH_SHORT).show();
-				break;
-		}
+//		switch (parent.getId()){
+//			case R.id.spinner_hosrealm:
+//				if(position == 0)
+//					Toast.makeText(getActivity(), "Test", Toast.LENGTH_SHORT).show();
+//				else if(position == 1)
+//					Toast.makeText(getActivity(), "Test1", Toast.LENGTH_SHORT).show();
+//				break;
+//			case R.id.spinner_hosbkk:
+//				Toast.makeText(getActivity(), "Test11111", Toast.LENGTH_SHORT).show();
+//				break;
+//		}
 	}
 
 	@Override

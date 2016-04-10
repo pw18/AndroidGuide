@@ -87,7 +87,7 @@ public class DatabaseGuide extends SQLiteOpenHelper {
 	
 	
 	
-	public  DatabaseGuide (Context context) {
+	public DatabaseGuide (Context context) {
 		super(context, DB_NAME, null, db_version);
 	}
 

@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -25,16 +28,17 @@ import java.util.ArrayList;
 
 public class ListDiseasesActivity extends Fragment {
 
-    ArrayAdapter<MyListDiseasesItem> adapter;
-    ListView lv_menu;
-    EditText et_search;
+//    ListView lv_menu;
+    private CustomListDiseases custom_adapter;
+    private RecyclerView recyclerView;
+    private EditText et_search;
 
-    String[] txt;
+    private String[] txt;
 
-    String url = "http://192.168.1.134/services/diseases.php";
+    private String url = "http://192.168.1.134/services/diseases.php";
 
-    ArrayList<MyListDiseasesItem> items;
-    ArrayList<MyListDiseasesItem> n_item;
+    private ArrayList<MyListDiseasesItem> items;
+    private ArrayList<MyListDiseasesItem> n_item;
 
     public static ListDiseasesActivity newInstance() {
         ListDiseasesActivity fragment = new ListDiseasesActivity();
@@ -87,32 +91,42 @@ public class ListDiseasesActivity extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_list_diseases, container, false);
+        return view;
+    }
 
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         setWidget(view);
+
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+
         items = new ArrayList<MyListDiseasesItem>();
         n_item = new ArrayList<MyListDiseasesItem>();
 
-        MyWebServiceListener listener = new MyWebServiceListener() {
-
-            @Override
-            public void myWebServiceOK(String result) throws Exception {
-                if (result != null && !"".equals(result)) {
-                    JSONArray jsonArray = new JSONArray(result);
-                    if (jsonArray != null && jsonArray.length() != 0) {
-                        for (int i = 0; i < jsonArray.length(); i++) {
-
-                        }
-                    }
-                }
-            }
-
-            @Override
-            public void myWebServiceFailed() {
-
-            }
-        };
-
-        new MyWebService(getActivity(), listener, "GET", url).execute();
+//        MyWebServiceListener listener = new MyWebServiceListener() {
+//
+//            @Override
+//            public void myWebServiceOK(String result) throws Exception {
+//                if (result != null && !"".equals(result)) {
+//                    JSONArray jsonArray = new JSONArray(result);
+//                    if (jsonArray != null && jsonArray.length() != 0) {
+//                        for (int i = 0; i < jsonArray.length(); i++) {
+//
+//                        }
+//                    }
+//                }
+//            }
+//
+//            @Override
+//            public void myWebServiceFailed() {
+//
+//            }
+//        };
+//
+//        new MyWebService(getActivity(), listener, "GET", url).execute();
 
         for (int i = 0; i < txt.length; i++) {
             MyListDiseasesItem data = new MyListDiseasesItem();
@@ -122,10 +136,10 @@ public class ListDiseasesActivity extends Fragment {
 
         }
 
-        CustomListDiseases custom_adapter = new CustomListDiseases(
-                getActivity(), R.layout.activity_list_diseases, items);
-        adapter = custom_adapter;
-        lv_menu.setAdapter(custom_adapter);
+        custom_adapter = new CustomListDiseases(items);
+
+        recyclerView.setAdapter(custom_adapter);
+//        lv_menu.setAdapter(custom_adapter);
 
         et_search.addTextChangedListener(new TextWatcher() {
 
@@ -159,7 +173,7 @@ public class ListDiseasesActivity extends Fragment {
                             items.add(n_item.get(i));
                         }
                     }
-                    adapter.notifyDataSetChanged();
+                    custom_adapter.notifyDataSetChanged();
                 }
             }
 
@@ -177,6 +191,7 @@ public class ListDiseasesActivity extends Fragment {
             }
         });
 
+        /*
         lv_menu.setOnItemClickListener(new OnItemClickListener() {
 
             public void onItemClick(AdapterView<?> parent, View view,
@@ -191,13 +206,13 @@ public class ListDiseasesActivity extends Fragment {
 
             }
         });
-
-        return view;
+        */
     }
 
     private void setWidget(View view) {
         // TODO Auto-generated method stub
-        lv_menu = (ListView) view.findViewById(R.id.listView_diseases_listdiseases);
+//        lv_menu = (ListView) view.findViewById(R.id.listView_diseases_listdiseases);
+        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView_diseases_listdiseases);
         et_search = (EditText) view.findViewById(R.id.editText_search_diseases);
 
     }

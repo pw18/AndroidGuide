@@ -11,7 +11,14 @@
                     "endOffset": 155
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 104,
+                        "endOffset": 155
+                    }
                 }
             },
             {
@@ -23,7 +30,14 @@
                     "endOffset": 263
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 160,
+                        "endColumn": 107,
+                        "endOffset": 263
+                    }
                 }
             },
             {
@@ -35,7 +49,14 @@
                     "endOffset": 386
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 268,
+                        "endColumn": 122,
+                        "endOffset": 386
+                    }
                 }
             },
             {
@@ -47,7 +68,14 @@
                     "endOffset": 484
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 391,
+                        "endColumn": 97,
+                        "endOffset": 484
+                    }
                 }
             },
             {
@@ -59,7 +87,14 @@
                     "endOffset": 592
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 489,
+                        "endColumn": 107,
+                        "endOffset": 592
+                    }
                 }
             },
             {
@@ -71,7 +106,14 @@
                     "endOffset": 681
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 597,
+                        "endColumn": 88,
+                        "endOffset": 681
+                    }
                 }
             },
             {
@@ -83,7 +125,14 @@
                     "endOffset": 783
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 686,
+                        "endColumn": 101,
+                        "endOffset": 783
+                    }
                 }
             },
             {
@@ -95,7 +144,14 @@
                     "endOffset": 893
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 788,
+                        "endColumn": 109,
+                        "endOffset": 893
+                    }
                 }
             },
             {
@@ -107,7 +163,14 @@
                     "endOffset": 970
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 898,
+                        "endColumn": 76,
+                        "endOffset": 970
+                    }
                 }
             },
             {
@@ -119,7 +182,14 @@
                     "endOffset": 1048
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 975,
+                        "endColumn": 77,
+                        "endOffset": 1048
+                    }
                 }
             },
             {
@@ -131,7 +201,14 @@
                     "endOffset": 1129
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1053,
+                        "endColumn": 80,
+                        "endOffset": 1129
+                    }
                 }
             },
             {
@@ -143,7 +220,14 @@
                     "endOffset": 1237
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1134,
+                        "endColumn": 107,
+                        "endOffset": 1237
+                    }
                 }
             },
             {
@@ -155,7 +239,14 @@
                     "endOffset": 1341
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1242,
+                        "endColumn": 103,
+                        "endOffset": 1341
+                    }
                 }
             },
             {
@@ -167,7 +258,14 @@
                     "endOffset": 1439
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1346,
+                        "endColumn": 97,
+                        "endOffset": 1439
+                    }
                 }
             },
             {
@@ -179,7 +277,14 @@
                     "endOffset": 1547
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1444,
+                        "endColumn": 107,
+                        "endOffset": 1547
+                    }
                 }
             },
             {
@@ -191,7 +296,14 @@
                     "endOffset": 1652
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1552,
+                        "endColumn": 104,
+                        "endOffset": 1652
+                    }
                 }
             },
             {
@@ -203,7 +315,14 @@
                     "endOffset": 1753
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1657,
+                        "endColumn": 100,
+                        "endOffset": 1753
+                    }
                 }
             },
             {
@@ -215,7 +334,14 @@
                     "endOffset": 1869
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1758,
+                        "endColumn": 115,
+                        "endOffset": 1869
+                    }
                 }
             },
             {
@@ -227,7 +353,14 @@
                     "endOffset": 1964
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1874,
+                        "endColumn": 94,
+                        "endOffset": 1964
+                    }
                 }
             },
             {
@@ -239,7 +372,14 @@
                     "endOffset": 2014
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 59,
+                        "endColumn": 49,
+                        "endOffset": 104
+                    }
                 }
             },
             {
@@ -251,7 +391,14 @@
                     "endOffset": 2115
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-th\\values-th.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1969,
+                        "endColumn": 100,
+                        "endOffset": 2065
+                    }
                 }
             },
             {
@@ -263,7 +410,14 @@
                     "endOffset": 2170
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 30,
+                        "startColumn": 4,
+                        "startOffset": 1479,
+                        "endColumn": 54,
+                        "endOffset": 1529
+                    }
                 }
             },
             {
@@ -275,7 +429,14 @@
                     "endOffset": 2220
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 826,
+                        "endColumn": 49,
+                        "endOffset": 871
+                    }
                 }
             },
             {
@@ -287,7 +448,14 @@
                     "endOffset": 2272
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 1115,
+                        "endColumn": 51,
+                        "endOffset": 1162
+                    }
                 }
             },
             {
@@ -299,7 +467,14 @@
                     "endOffset": 2333
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 533,
+                        "endColumn": 60,
+                        "endOffset": 589
+                    }
                 }
             },
             {
@@ -311,7 +486,14 @@
                     "endOffset": 2382
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 1168,
+                        "endColumn": 48,
+                        "endOffset": 1212
+                    }
                 }
             },
             {
@@ -323,7 +505,14 @@
                     "endOffset": 2440
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 1218,
+                        "endColumn": 57,
+                        "endOffset": 1271
+                    }
                 }
             },
             {
@@ -335,7 +524,14 @@
                     "endOffset": 2486
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 29,
+                        "startColumn": 4,
+                        "startOffset": 1432,
+                        "endColumn": 45,
+                        "endOffset": 1473
+                    }
                 }
             },
             {
@@ -347,7 +543,14 @@
                     "endOffset": 2541
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 36,
+                        "startColumn": 4,
+                        "startOffset": 1858,
+                        "endColumn": 54,
+                        "endOffset": 1908
+                    }
                 }
             },
             {
@@ -359,7 +562,14 @@
                     "endOffset": 2613
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 595,
+                        "endColumn": 71,
+                        "endOffset": 662
+                    }
                 }
             },
             {
@@ -371,7 +581,14 @@
                     "endOffset": 2669
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 42,
+                        "startColumn": 4,
+                        "startOffset": 2169,
+                        "endColumn": 55,
+                        "endOffset": 2220
+                    }
                 }
             },
             {
@@ -383,7 +600,14 @@
                     "endOffset": 2734
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 4,
+                        "startOffset": 1962,
+                        "endColumn": 64,
+                        "endOffset": 2022
+                    }
                 }
             },
             {
@@ -395,7 +619,14 @@
                     "endOffset": 2801
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 463,
+                        "endColumn": 66,
+                        "endOffset": 525
+                    }
                 }
             },
             {
@@ -407,7 +638,14 @@
                     "endOffset": 2858
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 152,
+                        "endColumn": 56,
+                        "endOffset": 204
+                    }
                 }
             },
             {
@@ -419,7 +657,14 @@
                     "endOffset": 2917
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 346,
+                        "endColumn": 58,
+                        "endOffset": 400
+                    }
                 }
             },
             {
@@ -431,7 +676,14 @@
                     "endOffset": 2973
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 406,
+                        "endColumn": 55,
+                        "endOffset": 457
+                    }
                 }
             },
             {
@@ -443,7 +695,14 @@
                     "endOffset": 3039
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 210,
+                        "endColumn": 65,
+                        "endOffset": 271
+                    }
                 }
             },
             {
@@ -455,7 +714,14 @@
                     "endOffset": 3107
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 277,
+                        "endColumn": 67,
+                        "endOffset": 340
+                    }
                 }
             },
             {
@@ -467,7 +733,14 @@
                     "endOffset": 3160
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 34,
+                        "startColumn": 4,
+                        "startOffset": 1753,
+                        "endColumn": 52,
+                        "endOffset": 1801
+                    }
                 }
             },
             {
@@ -479,7 +752,14 @@
                     "endOffset": 3210
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 35,
+                        "startColumn": 4,
+                        "startOffset": 1807,
+                        "endColumn": 49,
+                        "endOffset": 1852
+                    }
                 }
             },
             {
@@ -491,7 +771,14 @@
                     "endOffset": 3261
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 774,
+                        "endColumn": 50,
+                        "endOffset": 820
+                    }
                 }
             },
             {
@@ -503,7 +790,14 @@
                     "endOffset": 3310
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 1382,
+                        "endColumn": 48,
+                        "endOffset": 1426
+                    }
                 }
             },
             {
@@ -515,7 +809,14 @@
                     "endOffset": 3358
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1066,
+                        "endColumn": 47,
+                        "endOffset": 1109
+                    }
                 }
             },
             {
@@ -527,7 +828,14 @@
                     "endOffset": 3401
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 40,
+                        "startColumn": 4,
+                        "startOffset": 2079,
+                        "endColumn": 42,
+                        "endOffset": 2117
+                    }
                 }
             },
             {
@@ -539,7 +847,14 @@
                     "endOffset": 3456
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 1326,
+                        "endColumn": 54,
+                        "endOffset": 1376
+                    }
                 }
             },
             {
@@ -551,7 +866,14 @@
                     "endOffset": 3519
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 877,
+                        "endColumn": 62,
+                        "endOffset": 935
+                    }
                 }
             },
             {
@@ -563,7 +885,14 @@
                     "endOffset": 3580
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 33,
+                        "startColumn": 4,
+                        "startOffset": 1691,
+                        "endColumn": 60,
+                        "endOffset": 1747
+                    }
                 }
             },
             {
@@ -575,7 +904,14 @@
                     "endOffset": 3659
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 31,
+                        "startColumn": 4,
+                        "startOffset": 1535,
+                        "endColumn": 78,
+                        "endOffset": 1609
+                    }
                 }
             },
             {
@@ -2050,7 +2386,14 @@
                     "endOffset": 8678
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 41,
+                        "startColumn": 4,
+                        "startOffset": 2123,
+                        "endColumn": 44,
+                        "endOffset": 2163
+                    }
                 }
             },
             {
@@ -2062,7 +2405,14 @@
                     "endOffset": 8753
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 32,
+                        "startColumn": 4,
+                        "startOffset": 1615,
+                        "endColumn": 74,
+                        "endOffset": 1685
+                    }
                 }
             },
             {
@@ -2074,7 +2424,14 @@
                     "endOffset": 8803
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 668,
+                        "endColumn": 49,
+                        "endOffset": 713
+                    }
                 }
             },
             {
@@ -2086,7 +2443,14 @@
                     "endOffset": 8857
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 719,
+                        "endColumn": 53,
+                        "endOffset": 768
+                    }
                 }
             },
             {
@@ -2098,7 +2462,14 @@
                     "endOffset": 8922
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 941,
+                        "endColumn": 64,
+                        "endOffset": 1001
+                    }
                 }
             },
             {
@@ -2110,7 +2481,14 @@
                     "endOffset": 8980
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1007,
+                        "endColumn": 57,
+                        "endOffset": 1060
+                    }
                 }
             },
             {
@@ -2122,7 +2500,14 @@
                     "endOffset": 9028
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 1277,
+                        "endColumn": 47,
+                        "endOffset": 1320
+                    }
                 }
             },
             {
@@ -2134,7 +2519,14 @@
                     "endOffset": 9075
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 37,
+                        "startColumn": 4,
+                        "startOffset": 1914,
+                        "endColumn": 46,
+                        "endOffset": 1956
+                    }
                 }
             },
             {
@@ -2146,7 +2538,14 @@
                     "endOffset": 9125
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 4,
+                        "startOffset": 2028,
+                        "endColumn": 49,
+                        "endOffset": 2073
+                    }
                 }
             },
             {
@@ -2158,7 +2557,14 @@
                     "endOffset": 9164
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml"
+                    "file": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\values-th\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 112,
+                        "endColumn": 38,
+                        "endOffset": 146
+                    }
                 }
             }
         ]

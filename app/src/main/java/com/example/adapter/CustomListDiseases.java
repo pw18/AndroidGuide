@@ -5,8 +5,11 @@ import java.util.ArrayList;
 import com.example.androidguide.R;
 import com.example.items.MyListDiseasesItem;
 import com.example.items.MyListMenuItem;
+import com.example.view.MyListDiseasesItemViewHolder;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.support.v7.widget.RecyclerView;
 import android.text.style.SuperscriptSpan;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,32 +19,31 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 @SuppressWarnings("unused")
-public class CustomListDiseases extends ArrayAdapter<MyListDiseasesItem>{
-	
-	Context context;
-	ArrayList<MyListDiseasesItem>item;
+public class CustomListDiseases extends RecyclerView.Adapter<MyListDiseasesItemViewHolder>{
 
-	public CustomListDiseases(Context context, int resource, ArrayList<MyListDiseasesItem> item) {
-		super(context, resource, item);
-		this.item = item;
-		this.context = context;
+	ArrayList<MyListDiseasesItem> items;
 
+	public CustomListDiseases(ArrayList<MyListDiseasesItem> items){
+		this.items = items;
 	}
-	
+
 	@Override
-	public View getView (int position, View convertView, ViewGroup parent) {
-		
-		if (convertView == null){
-			LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-			convertView = inflater.inflate(R.layout.custom_listview_listdiseases,null);
-		}
-		
-		TextView _name = (TextView) convertView.findViewById(R.id.textView_listview_listdiseases);
-		
-		MyListDiseasesItem data = item.get(position);
-		_name.setText(data.getText());
-		
-		return convertView;
-	
-}
+	public MyListDiseasesItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+		View view = LayoutInflater.from(parent.getContext())
+				.inflate(R.layout.custom_listview_listdiseases, parent, false);
+		return new MyListDiseasesItemViewHolder(view);
 	}
+
+	@Override
+	public void onBindViewHolder(MyListDiseasesItemViewHolder holder, int position) {
+		MyListDiseasesItem item = items.get(position);
+		holder.txt.setText(item.getText());
+	}
+
+	@Override
+	public int getItemCount() {
+		if(items != null)
+			return items.size();
+		return 0;
+	}
+}

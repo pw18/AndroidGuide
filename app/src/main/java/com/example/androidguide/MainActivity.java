@@ -13,6 +13,7 @@ import android.view.Window;
 import android.widget.Toast;
 
 import com.example.utils.Constant;
+import com.example.utils.CopyDatabase;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -33,14 +34,7 @@ public class MainActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         handler = new Handler();
-        File file = new File(Environment.getExternalStorageDirectory(), Constant.FileNameDataBase);
-        if(!file.exists()) {
-            try {
-                copyDatabase();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+        CopyDatabase.init(getApplicationContext());
         runnable = new Runnable() {
         
             @Override
@@ -89,33 +83,5 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    public void copyDatabase() throws IOException {
-        File file = new File(Environment.getExternalStorageDirectory(), Constant.FileNameDataBase);
-
-        InputStream  in  = null;
-        OutputStream out = null;
-        try {
-            in  = getAssets().open(Constant.FileNameDataBase); //.I'm in a service, so I don't need context
-            out = new FileOutputStream(file);
-
-            int count = 0;
-            byte[] buffer = new byte[1024*2];
-            while ((count = in.read(buffer)) != -1) {
-                out.write(buffer, 0, count);
-                out.flush();
-            }
-        } catch (IOException err) {
-
-        } finally {
-            if (in != null)
-                try { in.close(); }
-                catch (IOException ignore) {  }
-            if (out != null)
-                try { out.close(); }
-                catch (IOException ignore) {  }
-        }
-
     }
 }
