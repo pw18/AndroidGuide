@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -22,13 +25,14 @@ import java.util.ArrayList;
 
 public class AIDActivity extends Fragment {
 	
-	ArrayAdapter<MyListAid> adapter;
-	ListView lv_menu;
-	EditText et_search;
-	String[] txt;
+//	ArrayAdapter<MyListAid> adapter;
+	private CustomListAid custom_adapter;
+	private RecyclerView recyclerView;
+	private EditText et_search;
+	private String[] txt;
 	
-	ArrayList<MyListAid> items;
-	ArrayList<MyListAid> n_item;
+	private ArrayList<MyListAid> items;
+	private ArrayList<MyListAid> n_item;
 
 	public static AIDActivity newInstance(){
 		AIDActivity fragment = new AIDActivity();
@@ -84,7 +88,18 @@ public class AIDActivity extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.activity_aid, container, false);
 
+		return view;
+
+	}
+
+	@Override
+	public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+		super.onViewCreated(view, savedInstanceState);
 		setWidget(view);
+
+		recyclerView.setHasFixedSize(true);
+		recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+		recyclerView.setItemAnimator(new DefaultItemAnimator());
 
 		items = new ArrayList<MyListAid>();
 		n_item = new ArrayList<MyListAid>();
@@ -97,9 +112,8 @@ public class AIDActivity extends Fragment {
 
 		}
 
-		CustomListAid custom_adapter = new CustomListAid(getActivity(), R.layout.activity_aid, items);
-		adapter = custom_adapter;
-		lv_menu.setAdapter(custom_adapter);
+		custom_adapter = new CustomListAid(items);
+		recyclerView.setAdapter(custom_adapter);
 
 		et_search.addTextChangedListener(new TextWatcher() {
 
@@ -107,32 +121,33 @@ public class AIDActivity extends Fragment {
 
 				String search = et_search.getText().toString();
 				int txtlength = search.length();
-				if(n_item != null){
-					if(txtlength > 0){
+				if (n_item != null) {
+					if (txtlength > 0) {
 						ArrayList<MyListAid> appListSort = new ArrayList<MyListAid>();
 
-						for(int i=0; i<n_item.size(); i++){
+						for (int i = 0; i < n_item.size(); i++) {
 							String sApp = n_item.get(i).getText();
-							if(txtlength <= sApp.length()){
-								if(search.equalsIgnoreCase((String) sApp.subSequence(0, txtlength))){
+							if (txtlength <= sApp.length()) {
+								if (search.equalsIgnoreCase((String) sApp.subSequence(0, txtlength))) {
 									appListSort.add(n_item.get(i));
 								}
 							}
 						}
 						items.clear();
-						for(int i=0; i<appListSort.size(); i++){
+						for (int i = 0; i < appListSort.size(); i++) {
 							items.add(appListSort.get(i));
 						}
 
-					}else{
+					} else {
 						items.clear();
-						for(int i=0; i<n_item.size(); i++){
+						for (int i = 0; i < n_item.size(); i++) {
 							items.add(n_item.get(i));
 						}
 					}
-					adapter.notifyDataSetChanged();
+					custom_adapter.notifyDataSetChanged();
 				}
 			}
+
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
 										  int after) {
@@ -148,25 +163,13 @@ public class AIDActivity extends Fragment {
 
 		});
 
-		lv_menu.setOnItemClickListener(new OnItemClickListener() {
-
-			public void onItemClick(AdapterView<?> parent, View view,
-									int position, long id) {
-				//Toast.makeText(getApplicationContext(), "List : "+position, Toast.LENGTH_LONG).show();
-				Intent intent = new Intent(getActivity(), DataAidActivity.class);
-				intent.putExtra("text1", txt[position]);
-				intent.putExtra("text2", "position : " + position);
-				startActivity(intent);
-
-			}
-		});
-
-		return view;
 	}
+
+
 	
 	private void setWidget(View view) {
 		// TODO Auto-generated method stub
-		lv_menu = (ListView) view.findViewById(R.id.listView_listaid);
+		recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView_firstaid_listdiseases);
 		et_search = (EditText) view.findViewById(R.id.editText_search_aid);
 	}
 

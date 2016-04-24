@@ -3,6 +3,7 @@ package com.example.adapter;
 import java.util.ArrayList;
 
 import android.content.Context;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,32 +11,36 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import com.example.androidguide.R;
 import com.example.items.MyListAid;
+import com.example.items.MyListMedicineTraditionalItem;
+import com.example.view.MyListAidItemViewHolder;
+import com.example.view.MyListMedicineTraditionalItemViewHolder;
 
 
+public class CustomListAid extends RecyclerView.Adapter<MyListAidItemViewHolder> {
+//	Context context;
 
-public class CustomListAid extends ArrayAdapter<MyListAid> {
-	Context context;
-	ArrayList<MyListAid>item;
+	ArrayList<MyListAid>items;
 
-	public CustomListAid(Context context, int resource, ArrayList<MyListAid> item) {
-		super(context, resource, item);
-		this.item = item;
-		this.context = context;
-		// TODO Auto-generated constructor stub
+	public CustomListAid( ArrayList<MyListAid> items) { this.items = items;}
+
+	@Override
+	public MyListAidItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+		View view = LayoutInflater.from(parent.getContext())
+				.inflate(R.layout.custom_listview_listaid, parent, false);
+		return new MyListAidItemViewHolder(view);
 	}
-	
-	public View getView (int position, View convertView, ViewGroup parent) {
-		
-		if (convertView == null){
-			LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-			convertView = inflater.inflate(R.layout.custom_listview_listaid,null);
+
+	@Override
+	public void onBindViewHolder(MyListAidItemViewHolder holder, int position) {
+		MyListAid item = items.get(position);
+		holder.txt.setText(item.getText());
 	}
-		
-TextView _name = (TextView) convertView.findViewById(R.id.textView_listview_listaid);
-		
-		MyListAid data = item.get(position);
-		_name.setText(data.getText());
-		
-		return convertView;
+
+	@Override
+	public int getItemCount() {
+		if (items != null)
+			return  items.size();
+		return 0;
+	}
+
 }
-	}

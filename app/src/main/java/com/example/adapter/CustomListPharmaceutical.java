@@ -2,45 +2,40 @@ package com.example.adapter;
 
 import java.util.ArrayList;
 
-import android.content.Context;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.example.androidguide.R;
-import com.example.items.MyListDiseasesItem;
-import com.example.items.MyListMenuItem;
 import com.example.items.MyListPharmaceuticalItem;
+import com.example.view.MyListPharmaceuticalItemViewHolder;
 
 @SuppressWarnings("unused")
-public class CustomListPharmaceutical extends ArrayAdapter<MyListPharmaceuticalItem>{
-		Context context;
-		ArrayList<MyListPharmaceuticalItem> item;
+public class CustomListPharmaceutical extends RecyclerView.Adapter<MyListPharmaceuticalItemViewHolder> {
+//		Context context;
+		ArrayList<MyListPharmaceuticalItem> items;
 
-		public CustomListPharmaceutical(Context context, int resource, ArrayList<MyListPharmaceuticalItem> item) {
-			super(context, resource, item);
-			this.item = item;
-			this.context = context;
-		}
-		
-			@Override
-			public View getView(int position, View convertView, ViewGroup parent) {
-				
-				if (convertView == null){
-					LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-					convertView = inflater.inflate(R.layout.custom_listview_listpharmaceutical,null);
-				}
-				
-				TextView _name = (TextView) convertView.findViewById(R.id.textView_listpharmaceutical);
-				
-				
-				MyListPharmaceuticalItem data = item.get(position);
-				_name.setText(data.getText());
-				
-				 
-				return convertView;
-}
+		public CustomListPharmaceutical( ArrayList<MyListPharmaceuticalItem> items) { this.items = items;}
+
+	@Override
+	public MyListPharmaceuticalItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+		View view = LayoutInflater.from(parent.getContext())
+				.inflate(R.layout.custom_listview_listpharmaceutical, parent, false);
+		return new MyListPharmaceuticalItemViewHolder(view);
 	}
+
+	@Override
+	public void onBindViewHolder(MyListPharmaceuticalItemViewHolder holder, int position) {
+		MyListPharmaceuticalItem item = items.get(position);
+		holder.txt.setText(item.getText());
+	}
+
+	@Override
+	public int getItemCount() {
+		if (items != null)
+			return  items.size();
+		return 0;
+	}
+}
+

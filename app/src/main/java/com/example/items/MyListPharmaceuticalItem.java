@@ -7,9 +7,7 @@ public class MyListPharmaceuticalItem {
 	public int getImg() {
 		return img;
 	}
-	public void setImg(int img) {
-		this.img = img;
-	}
+	public void setImg(int img) {this.img = img;}
 	public String getText() {
 		return text;
 	}

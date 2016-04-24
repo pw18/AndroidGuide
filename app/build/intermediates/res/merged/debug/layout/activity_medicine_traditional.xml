@@ -32,7 +32,7 @@
             android:src="@drawable/ic_medtraditional" />
 
         <TextView
-            android:id="@+id/textView_listpharmaceutical"
+            android:id="@+id/textView_listraditional"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
@@ -42,10 +42,10 @@
 
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/listView_medicine_traditional_listdiseases"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView_medicinetraditional_listdiseases"
+        android:scrollbars="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-    </ListView>
+        android:layout_height="match_parent"/>
 
 </LinearLayout>

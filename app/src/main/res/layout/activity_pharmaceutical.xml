@@ -42,10 +42,11 @@
 
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/listView_pharmaceutical_listdiseases"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView_pharmaceutical_listdiseases"
+        android:scrollbars="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-    </ListView>
+        android:layout_height="match_parent"/>
+
 
 </LinearLayout>
