@@ -1,10 +1,12 @@
 package com.example.adapter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.example.androidguide.R;
 import com.example.items.MyListDiseasesItem;
 import com.example.items.MyListMenuItem;
+import com.example.model.DiseasesModel;
 import com.example.view.MyListDiseasesItemViewHolder;
 
 import android.annotation.SuppressLint;
@@ -21,9 +23,9 @@ import android.widget.TextView;
 @SuppressWarnings("unused")
 public class CustomListDiseases extends RecyclerView.Adapter<MyListDiseasesItemViewHolder>{
 
-	ArrayList<MyListDiseasesItem> items;
+	List<DiseasesModel> items;
 
-	public CustomListDiseases(ArrayList<MyListDiseasesItem> items){
+	public CustomListDiseases(List<DiseasesModel> items){
 		this.items = items;
 	}
 
@@ -36,8 +38,8 @@ public class CustomListDiseases extends RecyclerView.Adapter<MyListDiseasesItemV
 
 	@Override
 	public void onBindViewHolder(MyListDiseasesItemViewHolder holder, int position) {
-		MyListDiseasesItem item = items.get(position);
-		holder.txt.setText(item.getText());
+		DiseasesModel item = items.get(position);
+		holder.txt.setText(item.getName());
 	}
 
 	@Override

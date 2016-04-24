@@ -1,7 +1,6 @@
 package com.example.androidguide;
 
 import android.content.ContextWrapper;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;

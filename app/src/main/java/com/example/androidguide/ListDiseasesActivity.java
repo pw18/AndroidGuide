@@ -17,28 +17,32 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+
+import com.example.Mydatabase.CRUD;
+import com.example.Mydatabase.DatabaseGuide;
 import com.example.adapter.CustomListDiseases;
 import com.example.controller.MyWebService;
 import com.example.controller.MyWebServiceListener;
+import com.example.controller.listener.RecyclerItemClickListener;
 import com.example.items.MyListDiseasesItem;
+import com.example.model.DiseasesModel;
 
 import org.json.JSONArray;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class ListDiseasesActivity extends Fragment {
+public class ListDiseasesActivity extends Fragment implements TextWatcher{
 
-//    ListView lv_menu;
     private CustomListDiseases custom_adapter;
     private RecyclerView recyclerView;
     private EditText et_search;
 
-    private String[] txt;
-
     private String url = "http://192.168.1.134/services/diseases.php";
 
-    private ArrayList<MyListDiseasesItem> items;
-    private ArrayList<MyListDiseasesItem> n_item;
+    private List<DiseasesModel> items;
+    private List<DiseasesModel> n_item;
+    private CRUD crud;
 
     public static ListDiseasesActivity newInstance() {
         ListDiseasesActivity fragment = new ListDiseasesActivity();
@@ -53,38 +57,6 @@ public class ListDiseasesActivity extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        txt = new String[]{
-                getResources().getString(R.string.strCystitis),
-                getResources().getString(R.string.strGastroesophagealRefluxDisease),
-                getResources().getString(R.string.strTineaCorporis),
-                getResources().getString(R.string.strTineaVesicolor),
-                getResources().getString(R.string.strHordeolum),
-                getResources().getString(R.string.strCommonCold),
-                getResources().getString(R.string.strNauseaVomitting),
-                getResources().getString(R.string.strTineapedis),
-                getResources().getString(R.string.strTineaungium),
-                getResources().getString(R.string.strLeukorrhea),
-                getResources().getString(R.string.strConstipation),
-                getResources().getString(R.string.strDiarrhea),
-                getResources().getString(R.string.strDysmenorrhea),
-                getResources().getString(R.string.strToothache),
-                getResources().getString(R.string.strMigraine),
-                getResources().getString(R.string.strImpetigo),
-                getResources().getString(R.string.strEczema),
-                getResources().getString(R.string.strAphthousUlcer),
-                getResources().getString(R.string.strPoisoningfromPesticides),
-                getResources().getString(R.string.strSuppurativeWoundInfection),
-                getResources().getString(R.string.strPepticUlcer),
-                getResources().getString(R.string.strGnathostomiasis),
-                getResources().getString(R.string.strHerpesSimplex),
-                getResources().getString(R.string.strEpistaxis),
-                getResources().getString(R.string.strUrticaria),
-                getResources().getString(R.string.strGingivalBleeding),
-                getResources().getString(R.string.strVertigo),
-                getResources().getString(R.string.strMeasles),
-                getResources().getString(R.string.strGermanMeasles),
-                getResources().getString(R.string.strScabiasis)
-        };
     }
 
     @Nullable
@@ -98,13 +70,10 @@ public class ListDiseasesActivity extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         setWidget(view);
-
+        crud = new CRUD(getContext());
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-
-        items = new ArrayList<MyListDiseasesItem>();
-        n_item = new ArrayList<MyListDiseasesItem>();
 
 //        MyWebServiceListener listener = new MyWebServiceListener() {
 //
@@ -128,68 +97,24 @@ public class ListDiseasesActivity extends Fragment {
 //
 //        new MyWebService(getActivity(), listener, "GET", url).execute();
 
-        for (int i = 0; i < txt.length; i++) {
-            MyListDiseasesItem data = new MyListDiseasesItem();
-            data.setText(txt[i]);
-            items.add(data);
-            n_item.add(data);
-
-        }
+        items = crud.selectDiseasesAll();
+        n_item = crud.selectDiseasesAll();
 
         custom_adapter = new CustomListDiseases(items);
 
         recyclerView.setAdapter(custom_adapter);
-//        lv_menu.setAdapter(custom_adapter);
 
-        et_search.addTextChangedListener(new TextWatcher() {
+        et_search.addTextChangedListener(this);
 
+        recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getContext(), new RecyclerItemClickListener.OnItemClickListener() {
             @Override
-            public void onTextChanged(CharSequence s, int start, int before,
-                                      int count) {
-                String search = et_search.getText().toString();
-                int txtlength = search.length();
-                if (n_item != null) {
-                    if (txtlength > 0) {
-                        ArrayList<MyListDiseasesItem> appListSort = new ArrayList<MyListDiseasesItem>();
-
-                        for (int i = 0; i < n_item.size(); i++) {
-                            String sApp = n_item.get(i).getText();
-                            if (txtlength <= sApp.length()) {
-                                if (search.equalsIgnoreCase((String) sApp
-                                        .subSequence(0, txtlength))) {
-                                    appListSort.add(n_item.get(i));
-                                }
-                            }
-                        }
-
-                        items.clear();
-                        for (int i = 0; i < appListSort.size(); i++) {
-                            items.add(appListSort.get(i));
-                        }
-
-                    } else {
-                        items.clear();
-                        for (int i = 0; i < n_item.size(); i++) {
-                            items.add(n_item.get(i));
-                        }
-                    }
-                    custom_adapter.notifyDataSetChanged();
-                }
+            public void onItemClick(View view, int position) {
+                Intent intent = new Intent(getActivity(), DataDiseasesActivity.class);
+                intent.putExtra("text1", items.get(position).getName());
+                intent.putExtra("text2", "position : " + position);
+                startActivity(intent);
             }
-
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count,
-                                          int after) {
-                // TODO Auto-generated method stub
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                // TODO Auto-generated method stub
-
-            }
-        });
+        }));
 
         /*
         lv_menu.setOnItemClickListener(new OnItemClickListener() {
@@ -211,9 +136,51 @@ public class ListDiseasesActivity extends Fragment {
 
     private void setWidget(View view) {
         // TODO Auto-generated method stub
-//        lv_menu = (ListView) view.findViewById(R.id.listView_diseases_listdiseases);
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView_diseases_listdiseases);
         et_search = (EditText) view.findViewById(R.id.editText_search_diseases);
+
+    }
+
+    @Override
+    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+    }
+
+    @Override
+    public void onTextChanged(CharSequence s, int start, int before, int count) {
+        String search = et_search.getText().toString();
+        int txtlength = search.length();
+        if (n_item != null) {
+            if (txtlength > 0) {
+                List<DiseasesModel> appListSort = new ArrayList<>();
+
+                for (int i = 0; i < n_item.size(); i++) {
+                    String sApp = n_item.get(i).getName();
+                    if (txtlength <= sApp.length()) {
+                        if (search.equalsIgnoreCase((String) sApp
+                                .subSequence(0, txtlength))) {
+                            appListSort.add(n_item.get(i));
+                        }
+                    }
+                }
+
+                items.clear();
+                for (int i = 0; i < appListSort.size(); i++) {
+                    items.add(appListSort.get(i));
+                }
+
+            } else {
+                items.clear();
+                for (int i = 0; i < n_item.size(); i++) {
+                    items.add(n_item.get(i));
+                }
+            }
+            custom_adapter.notifyDataSetChanged();
+        }
+    }
+
+    @Override
+    public void afterTextChanged(Editable s) {
 
     }
 }

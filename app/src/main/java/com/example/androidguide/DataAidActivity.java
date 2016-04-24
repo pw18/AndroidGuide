@@ -22,9 +22,11 @@ public class DataAidActivity extends AppCompatActivity {
 		if(intent != null){
 			String recive_txt1 = intent.getExtras().getString("text1");
 			String recive_txt2 = intent.getExtras().getString("text2");
-			
-			txt1.setText(recive_txt1);
-			txt2.setText(recive_txt2);
+
+			if(recive_txt1 != null && recive_txt2 != null) {
+				txt1.setText(recive_txt1);
+				txt2.setText(recive_txt2);
+			}
 		}
 		
 	}

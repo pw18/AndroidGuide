@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 
 public class AboutUsActivity extends Fragment {
 
+
     public static AboutUsActivity newInstance() {
         AboutUsActivity fragment = new AboutUsActivity();
 

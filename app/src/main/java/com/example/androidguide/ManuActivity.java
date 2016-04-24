@@ -2,7 +2,7 @@ package com.example.androidguide;
 import java.util.ArrayList;
 import com.example.adapter.CustomListMenu;
 import com.example.items.MyListMenuItem;
-import android.support.v7.app.ActionBarActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

@@ -34,7 +34,11 @@ public class MainActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         handler = new Handler();
-        CopyDatabase.init(getApplicationContext());
+        try {
+            CopyDatabase.init(getApplicationContext());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         runnable = new Runnable() {
         
             @Override

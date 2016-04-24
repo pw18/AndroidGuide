@@ -20,13 +20,13 @@ import android.widget.ListView;
 
 import com.example.adapter.CustomListMedicineTraditional;
 import com.example.adapter.CustomListPharmaceutical;
+import com.example.controller.listener.RecyclerItemClickListener;
 import com.example.items.MyListMedicineTraditionalItem;
 
 import java.util.ArrayList;
 
-public class MedicineTraditionalActivity extends Fragment {
-	
-//	ArrayAdapter<MyListMedicineTraditionalItem> adapter;
+public class MedicineTraditionalActivity extends Fragment implements TextWatcher {
+
 	private CustomListMedicineTraditional custom_adapter;
 	private RecyclerView recyclerView;
 	private EditText et_search;
@@ -117,68 +117,20 @@ public class MedicineTraditionalActivity extends Fragment {
 
 		recyclerView.setAdapter(custom_adapter);
 
-		et_search.addTextChangedListener(new TextWatcher() {
+		et_search.addTextChangedListener(this);
 
-			public void onTextChanged(CharSequence s, int start, int before, int count) {
+		recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getContext(), new
+				RecyclerItemClickListener.OnItemClickListener() {
 
-				String search = et_search.getText().toString();
-				int txtlength = search.length();
-				if(n_item != null){
-					if(txtlength > 0){
-						ArrayList<MyListMedicineTraditionalItem> appListSort = new ArrayList<MyListMedicineTraditionalItem>();
-
-						for(int i=0; i<n_item.size(); i++){
-							String sApp = n_item.get(i).getText();
-							if(txtlength <= sApp.length()){
-								if(search.equalsIgnoreCase((String) sApp.subSequence(0, txtlength))){
-									appListSort.add(n_item.get(i));
-								}
-							}
-						}
-						items.clear();
-						for(int i=0; i<appListSort.size(); i++){
-							items.add(appListSort.get(i));
-						}
-
-					}else{
-						items.clear();
-						for(int i=0; i<n_item.size(); i++){
-							items.add(n_item.get(i));
-						}
+					@Override
+					public void onItemClick(View view, int position) {
+						Intent intent = new Intent(getActivity(), DataMedicinetraditionalActivity.class);
+						intent.putExtra("text1", items.get(position).getText());
+						intent.putExtra("text2", "position : " + position);
+						startActivity(intent);
 					}
-					custom_adapter.notifyDataSetChanged();
-				}
-			}
-			@Override
-			public void beforeTextChanged(CharSequence s, int start, int count,
-										  int after) {
-				// TODO Auto-generated method stub
+				}));
 
-			}
-
-			@Override
-			public void afterTextChanged(Editable s) {
-				// TODO Auto-generated method stub
-
-			}
-
-		});
-
-
-//		lv_menu.setOnItemClickListener(new OnItemClickListener() {
-//
-//			public void onItemClick(AdapterView<?> parent, View view,
-//									int position, long id) {
-//				//Toast.makeText(getApplicationContext(), "List : "+position, Toast.LENGTH_LONG).show();
-//				Intent intent = new Intent(getActivity(), DataMedicinetraditionalActivity.class);
-//				intent.putExtra("text1", txt[position]);
-//				intent.putExtra("text2", "position : " + position);
-//				startActivity(intent);
-//
-//			}
-//		});
-//
-//		return view;
 	}
 
 	private void setWidget(View view) {
@@ -187,4 +139,45 @@ public class MedicineTraditionalActivity extends Fragment {
 		et_search = (EditText) view.findViewById(R.id.editText_search_medicinetraditional);
 	}
 
+	@Override
+	public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+	}
+
+	@Override
+	public void onTextChanged(CharSequence s, int start, int before, int count) {
+		String search = et_search.getText().toString();
+		int txtlength = search.length();
+		if(n_item != null){
+			if(txtlength > 0){
+				ArrayList<MyListMedicineTraditionalItem> appListSort = new ArrayList<MyListMedicineTraditionalItem>();
+
+				for(int i=0; i<n_item.size(); i++){
+					String sApp = n_item.get(i).getText();
+					if(txtlength <= sApp.length()){
+						if(search.equalsIgnoreCase((String) sApp.subSequence(0, txtlength))){
+							appListSort.add(n_item.get(i));
+						}
+					}
+				}
+				items.clear();
+				for(int i=0; i<appListSort.size(); i++){
+					items.add(appListSort.get(i));
+				}
+
+			}else{
+				items.clear();
+				for(int i=0; i<n_item.size(); i++){
+					items.add(n_item.get(i));
+				}
+			}
+			custom_adapter.notifyDataSetChanged();
+		}
+
+	}
+
+	@Override
+	public void afterTextChanged(Editable s) {
+
+	}
 }

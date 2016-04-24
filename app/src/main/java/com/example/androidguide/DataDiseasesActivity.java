@@ -1,6 +1,5 @@
 package com.example.androidguide;
 
-import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,7 +9,11 @@ import android.widget.TextView;
 
 public class DataDiseasesActivity extends AppCompatActivity {
 	
-	TextView txt1, txt2;
+	private TextView txt1;
+	private TextView txt2;
+	private TextView txt3;
+	private TextView txt4;
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -22,15 +25,23 @@ public class DataDiseasesActivity extends AppCompatActivity {
 		if(intent != null){
 			String recive_txt1 = intent.getExtras().getString("text1");
 			String recive_txt2 = intent.getExtras().getString("text2");
-			
-			txt1.setText(recive_txt1);
-			txt2.setText(recive_txt2);
+			String recive_txt3 = intent.getExtras().getString("text3");
+			String recive_txt4 = intent.getExtras().getString("text4");
+
+			if(recive_txt1 != null && recive_txt2 != null) {
+				txt1.setText(recive_txt1);
+				txt2.setText(recive_txt2);
+				txt3.setText(recive_txt3);
+				txt4.setText(recive_txt4);
+			}
 		}
 	}
 
 	private void setWidget(){
-		txt1 = (TextView) findViewById(R.id.txt1_datadiseases);
-		txt2 = (TextView) findViewById(R.id.txt2_datadiseases);
+		txt1 = (TextView) findViewById(R.id.textView_namediseases);
+		txt2 = (TextView) findViewById(R.id.textView_sysptomdiseases);
+		txt3 = (TextView) findViewById(R.id.textView_causediseases);
+		txt4 = (TextView) findViewById(R.id.textView_sysptominstantdiseases);
 	}
 	
 	
