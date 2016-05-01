@@ -14,6 +14,9 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import com.example.Mydatabase.CRUD;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -23,6 +26,8 @@ import java.io.OutputStream;
 public class MainMenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    DrawerLayout drawer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +35,7 @@ public class MainMenuActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
@@ -42,7 +47,6 @@ public class MainMenuActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -92,9 +96,16 @@ public class MainMenuActivity extends AppCompatActivity
             fragment = AboutUsActivity.newInstance();
         } else if (id == R.id.menu_copydb) {
             fragment = null;
-            ContextWrapper cw = new ContextWrapper(getApplicationContext());
-            String DB_PATH = cw.getFilesDir().getAbsolutePath() + "/databases/"; //edited to databases
-            copyDataBase(DB_PATH);
+//            ContextWrapper cw = new ContextWrapper(getApplicationContext());
+//            String DB_PATH = cw.getFilesDir().getAbsolutePath() + "/databases/"; //edited to databases
+//            copyDataBase(DB_PATH);
+            CRUD crud = new CRUD(getApplicationContext());
+            if(crud.testInsert() != -1)
+                Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
+            else
+                Toast.makeText(getApplicationContext(), "failed", Toast.LENGTH_LONG).show();
+
+            drawer.closeDrawers();
         }
         FragmentManager manager = getSupportFragmentManager();
         if (fragment != null) {
@@ -102,7 +113,6 @@ public class MainMenuActivity extends AppCompatActivity
             transaction.commit();
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

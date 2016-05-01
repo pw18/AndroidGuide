@@ -24,6 +24,90 @@ public class CRUD {
 		values.put("Username" , user);
 		values.put("Password" , pass);
 		return db.insert(connect_db.DB_TABLE_ADMIN, null, values);
+
+	}
+
+	public long testInsert(){
+		ContentValues values = new ContentValues();
+		values.put(DatabaseGuide.DB_DisName , "TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest");
+		values.put(DatabaseGuide.DB_DisSysptom , "TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest");
+		values.put(DatabaseGuide.DB_DisCause , "TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest");
+		values.put(DatabaseGuide.DB_DisSysptomInstant , "TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest"+
+				"TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest");
+		return db.insert(connect_db.DB_TABLE_Diseases, null, values);
 	}
 
 	public List<DiseasesModel> selectDiseasesAll(){
