@@ -111,7 +111,9 @@ public class ListDiseasesActivity extends Fragment implements TextWatcher{
             public void onItemClick(View view, int position) {
                 Intent intent = new Intent(getActivity(), DataDiseasesActivity.class);
                 intent.putExtra("text1", items.get(position).getName());
-                intent.putExtra("text2", "position : " + position);
+                intent.putExtra("text2", items.get(position).getSysptom());
+                intent.putExtra("text3", items.get(position).getCause());
+                intent.putExtra("text4", items.get(position).getSysptomInstant());
                 startActivity(intent);
             }
         }));

@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseGuide extends SQLiteOpenHelper {
 	
-	private final static String DB_NAME = "MyDB";
+	private final static String DB_NAME = "mydatabase.db";
 	private static int db_version = 1 ;
 	public static String DB_TABLE_ADMIN ="TABLE_ADMIN";
 	public static String DB_Feild_ID = "Id";
