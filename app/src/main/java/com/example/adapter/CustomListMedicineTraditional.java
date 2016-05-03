@@ -1,11 +1,13 @@
 package com.example.adapter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.example.androidguide.R;
 import com.example.items.MyListDiseasesItem;
 import com.example.items.MyListMedicineTraditionalItem;
 import com.example.items.MyListPharmaceuticalItem;
+import com.example.model.TraditionalModel;
 import com.example.view.MyListMedicineTraditionalItemViewHolder;
 import com.example.view.MyListPharmaceuticalItemViewHolder;
 
@@ -20,10 +22,11 @@ import android.widget.TextView;
 @SuppressWarnings("unused")
 public class CustomListMedicineTraditional extends RecyclerView.Adapter<MyListMedicineTraditionalItemViewHolder>{
 	
-//	Context context;
-	ArrayList<MyListMedicineTraditionalItem>items;
 
-	public CustomListMedicineTraditional( ArrayList<MyListMedicineTraditionalItem> items) { this.items = items;}
+	List<TraditionalModel> items;
+
+	public CustomListMedicineTraditional( List<TraditionalModel> items) {
+		this.items = items;}
 
 	@Override
 	public MyListMedicineTraditionalItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -34,8 +37,8 @@ public class CustomListMedicineTraditional extends RecyclerView.Adapter<MyListMe
 
 	@Override
 	public void onBindViewHolder(MyListMedicineTraditionalItemViewHolder holder, int position) {
-		MyListMedicineTraditionalItem item = items.get(position);
-		holder.txt.setText(item.getText());
+		TraditionalModel item = items.get(position);
+		holder.txt.setText(item.getName());
 	}
 
 	@Override

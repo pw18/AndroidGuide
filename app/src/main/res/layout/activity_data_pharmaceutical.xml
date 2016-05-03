@@ -23,22 +23,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ชื่อโรค:" />
+                android:text="ขนานยาแผนปัจจุบันขนาดยาสำหรับผู้ใหญ่:" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView_namediseases1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="...." />
-
-            </LinearLayout>
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,20 +34,66 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ขนานยาแผนปัจจุบันขนาดยาผู้ใหญ่สำหรับโรค:" />
+                android:text="รายชื่อยา:" />
 
-            <LinearLayout
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView_datanamepharmaceutical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:text="....." />
 
-                <TextView
-                    android:id="@+id/textView_datapharmaceutical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="....." />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ขนาดการใช้ยา:" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView_dataparallel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="....." />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="รายละเอียดการใช้ยา:" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView_datadetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="....." />
+
         </LinearLayout>
 
     </LinearLayout>

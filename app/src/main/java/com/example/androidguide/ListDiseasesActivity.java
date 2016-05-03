@@ -70,6 +70,7 @@ public class ListDiseasesActivity extends Fragment implements TextWatcher{
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         setWidget(view);
+
         crud = new CRUD(getContext());
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));

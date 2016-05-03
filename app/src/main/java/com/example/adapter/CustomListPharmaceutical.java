@@ -1,6 +1,7 @@
 package com.example.adapter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,14 +10,16 @@ import android.view.ViewGroup;
 
 import com.example.androidguide.R;
 import com.example.items.MyListPharmaceuticalItem;
+import com.example.model.PhamaceuticalModel;
 import com.example.view.MyListPharmaceuticalItemViewHolder;
 
 @SuppressWarnings("unused")
 public class CustomListPharmaceutical extends RecyclerView.Adapter<MyListPharmaceuticalItemViewHolder> {
-//		Context context;
-		ArrayList<MyListPharmaceuticalItem> items;
 
-		public CustomListPharmaceutical( ArrayList<MyListPharmaceuticalItem> items) { this.items = items;}
+		List<PhamaceuticalModel> items;
+
+		public CustomListPharmaceutical(List<PhamaceuticalModel> items) {
+			this.items = items;}
 
 	@Override
 	public MyListPharmaceuticalItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -27,8 +30,8 @@ public class CustomListPharmaceutical extends RecyclerView.Adapter<MyListPharmac
 
 	@Override
 	public void onBindViewHolder(MyListPharmaceuticalItemViewHolder holder, int position) {
-		MyListPharmaceuticalItem item = items.get(position);
-		holder.txt.setText(item.getText());
+		PhamaceuticalModel item = items.get(position);
+		holder.txt.setText(item.getName());
 	}
 
 	@Override

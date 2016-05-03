@@ -32,7 +32,7 @@
             android:src="@drawable/ic_medmodern" />
 
         <TextView
-            android:id="@+id/textView_listpharmaceutical"
+            android:id="@+id/textView_pharmaceutical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"

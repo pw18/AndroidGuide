@@ -9,8 +9,10 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 public class DataPharmaceuticalActivity extends AppCompatActivity {
-	
-	TextView txt1, txt2;
+
+	private TextView txt1;
+	private TextView txt2;
+	private TextView txt3;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,16 +25,21 @@ public class DataPharmaceuticalActivity extends AppCompatActivity {
 		if(intent != null){
 			String recive_txt1 = intent.getExtras().getString("text1");
 			String recive_txt2 = intent.getExtras().getString("text2");
+			String recive_txt3 = intent.getExtras().getString("text3");
+
 
 			if(recive_txt1 != null && recive_txt2 != null) {
 				txt1.setText(recive_txt1);
 				txt2.setText(recive_txt2);
+				txt3.setText(recive_txt3);
+
 			}
 		}
 	}
 	private void setWidget(){
-		txt1 = (TextView) findViewById(R.id.txt1_datapharmaceutical);
-		txt2 = (TextView) findViewById(R.id.txt2_datapharmaceutical);
+		txt1 = (TextView) findViewById(R.id.textView_datanamepharmaceutical);
+		txt2 = (TextView) findViewById(R.id.textView_dataparallel);
+		txt3 = (TextView) findViewById(R.id.textView_datadetails);
 	}
 
 	@Override

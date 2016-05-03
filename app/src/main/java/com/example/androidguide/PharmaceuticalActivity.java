@@ -18,12 +18,15 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import com.example.Mydatabase.CRUD;
 import com.example.adapter.CustomListDiseases;
 import com.example.adapter.CustomListPharmaceutical;
 import com.example.controller.listener.RecyclerItemClickListener;
 import com.example.items.MyListPharmaceuticalItem;
+import com.example.model.PhamaceuticalModel;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class PharmaceuticalActivity extends Fragment implements TextWatcher {
@@ -33,10 +36,9 @@ public class PharmaceuticalActivity extends Fragment implements TextWatcher {
 	private RecyclerView recyclerView;
 	private EditText et_search;
 
-	private String[] txt ;
-
-	private ArrayList<MyListPharmaceuticalItem> items;
-	private ArrayList<MyListPharmaceuticalItem> n_item;
+	private List<PhamaceuticalModel> items;
+	private List<PhamaceuticalModel> n_item;
+	private CRUD crud;
 
 	public static PharmaceuticalActivity newInstance(){
 		PharmaceuticalActivity fragment = new PharmaceuticalActivity();
@@ -52,38 +54,38 @@ public class PharmaceuticalActivity extends Fragment implements TextWatcher {
 	public void onCreate(@Nullable Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		txt = new String[]{
-				getResources().getString(R.string.strCystitis),
-				getResources().getString(R.string.strGastroesophagealRefluxDisease),
-				getResources().getString(R.string.strTineaCorporis),
-				getResources().getString(R.string.strTineaVesicolor),
-				getResources().getString(R.string.strHordeolum),
-				getResources().getString(R.string.strCommonCold),
-				getResources().getString(R.string.strNauseaVomitting),
-				getResources().getString(R.string.strTineapedis),
-				getResources().getString(R.string.strTineaungium),
-				getResources().getString(R.string.strLeukorrhea),
-				getResources().getString(R.string.strConstipation),
-				getResources().getString(R.string.strDiarrhea),
-				getResources().getString(R.string.strDysmenorrhea),
-				getResources().getString(R.string.strToothache),
-				getResources().getString(R.string.strMigraine),
-				getResources().getString(R.string.strImpetigo),
-				getResources().getString(R.string.strEczema),
-				getResources().getString(R.string.strAphthousUlcer),
-				getResources().getString(R.string.strPoisoningfromPesticides),
-				getResources().getString(R.string.strSuppurativeWoundInfection),
-				getResources().getString(R.string.strPepticUlcer),
-				getResources().getString(R.string.strGnathostomiasis),
-				getResources().getString(R.string.strHerpesSimplex),
-				getResources().getString(R.string.strEpistaxis),
-				getResources().getString(R.string.strUrticaria),
-				getResources().getString(R.string.strGingivalBleeding),
-				getResources().getString(R.string.strVertigo),
-				getResources().getString(R.string.strMeasles),
-				getResources().getString(R.string.strGermanMeasles),
-				getResources().getString(R.string.strScabiasis)
-		};
+//		txt = new String[]{
+//				getResources().getString(R.string.strCystitis),
+//				getResources().getString(R.string.strGastroesophagealRefluxDisease),
+//				getResources().getString(R.string.strTineaCorporis),
+//				getResources().getString(R.string.strTineaVesicolor),
+//				getResources().getString(R.string.strHordeolum),
+//				getResources().getString(R.string.strCommonCold),
+//				getResources().getString(R.string.strNauseaVomitting),
+//				getResources().getString(R.string.strTineapedis),
+//				getResources().getString(R.string.strTineaungium),
+//				getResources().getString(R.string.strLeukorrhea),
+//				getResources().getString(R.string.strConstipation),
+//				getResources().getString(R.string.strDiarrhea),
+//				getResources().getString(R.string.strDysmenorrhea),
+//				getResources().getString(R.string.strToothache),
+//				getResources().getString(R.string.strMigraine),
+//				getResources().getString(R.string.strImpetigo),
+//				getResources().getString(R.string.strEczema),
+//				getResources().getString(R.string.strAphthousUlcer),
+//				getResources().getString(R.string.strPoisoningfromPesticides),
+//				getResources().getString(R.string.strSuppurativeWoundInfection),
+//				getResources().getString(R.string.strPepticUlcer),
+//				getResources().getString(R.string.strGnathostomiasis),
+//				getResources().getString(R.string.strHerpesSimplex),
+//				getResources().getString(R.string.strEpistaxis),
+//				getResources().getString(R.string.strUrticaria),
+//				getResources().getString(R.string.strGingivalBleeding),
+//				getResources().getString(R.string.strVertigo),
+//				getResources().getString(R.string.strMeasles),
+//				getResources().getString(R.string.strGermanMeasles),
+//				getResources().getString(R.string.strScabiasis)
+//		};
 
 	}
 
@@ -102,35 +104,28 @@ public class PharmaceuticalActivity extends Fragment implements TextWatcher {
 	public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 		super.onViewCreated(view, savedInstanceState);
 		setWidget(view);
-
+		crud = new CRUD(getContext());
 		recyclerView.setHasFixedSize(true);
 		recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 		recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-		items = new ArrayList<MyListPharmaceuticalItem>();
-		n_item = new ArrayList<MyListPharmaceuticalItem>();
-
-
-		for(int i=0; i<txt.length; i++){
-			MyListPharmaceuticalItem data = new MyListPharmaceuticalItem();
-			data.setText(txt[i]);
-			items.add(data);
-			n_item.add(data);
-
-		}
+		items = crud.selectPhamaceuticalAll();
+		n_item = crud.selectPhamaceuticalAll();
 
 		custom_adapter = new CustomListPharmaceutical(items);
 
 		recyclerView.setAdapter(custom_adapter);
 
 		et_search.addTextChangedListener(this);
+
 		recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getContext(), new RecyclerItemClickListener.OnItemClickListener() {
 
 					@Override
 					public void onItemClick(View view, int position) {
 						Intent intent = new Intent(getActivity(), DataPharmaceuticalActivity.class);
-						intent.putExtra("text1", items.get(position).getText());
-						intent.putExtra("text2", "position : " + position);
+						intent.putExtra("text1", items.get(position).getName());
+						intent.putExtra("text2", items.get(position).getParallel());
+						intent.putExtra("text3", items.get(position).getDetails());
 						startActivity(intent);
 					}
 		}));
@@ -153,12 +148,13 @@ public class PharmaceuticalActivity extends Fragment implements TextWatcher {
 	public void onTextChanged(CharSequence s, int start, int before, int count) {
 		String search = et_search.getText().toString();
 		int txtlength = search.length();
+
 		if (n_item != null) {
 			if (txtlength > 0) {
-				ArrayList<MyListPharmaceuticalItem> appListSort = new ArrayList<MyListPharmaceuticalItem>();
+				List<PhamaceuticalModel> appListSort = new ArrayList<>();
 
 				for (int i = 0; i < n_item.size(); i++) {
-					String sApp = n_item.get(i).getText();
+					String sApp = n_item.get(i).getName();
 					if (txtlength <= sApp.length()) {
 						if (search.equalsIgnoreCase((String) sApp.subSequence(0, txtlength))) {
 							appListSort.add(n_item.get(i));

@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class DataAidActivity extends AppCompatActivity {
 
-	TextView txt1, txt2;
+	private TextView txt1;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -21,19 +21,19 @@ public class DataAidActivity extends AppCompatActivity {
 		Intent intent = getIntent();
 		if(intent != null){
 			String recive_txt1 = intent.getExtras().getString("text1");
-			String recive_txt2 = intent.getExtras().getString("text2");
 
-			if(recive_txt1 != null && recive_txt2 != null) {
+
+			if(recive_txt1 != null && recive_txt1 != null) {
 				txt1.setText(recive_txt1);
-				txt2.setText(recive_txt2);
+
 			}
 		}
 		
 	}
 
 	private void setWidget(){
-		txt1 = (TextView) findViewById(R.id.txt1_dataaid);
-		txt2 = (TextView) findViewById(R.id.txt2_dataaid);
+
+		txt1 = (TextView) findViewById(R.id.textView_datafirstaid);
 	}
 
 	@Override

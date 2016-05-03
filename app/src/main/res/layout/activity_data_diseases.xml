@@ -25,18 +25,18 @@
                 android:layout_height="wrap_content"
                 android:text="ชื่อโรค:" />
 
-            <LinearLayout
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView_namediseases"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:text="...." />
 
-                <TextView
-                    android:id="@+id/textView_namediseases"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="...." />
-
-            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -49,18 +49,18 @@
                 android:layout_height="wrap_content"
                 android:text="อาการของโรค:" />
 
-            <LinearLayout
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView_sysptomdiseases"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:text="....." />
 
-                <TextView
-                    android:id="@+id/textView_sysptomdiseases"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="....." />
-
-            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -73,18 +73,19 @@
                 android:layout_height="wrap_content"
                 android:text="สาเหตุการเกิดโรค:" />
 
-            <LinearLayout
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView_causediseases"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:text="....." />
 
-                <TextView
-                    android:id="@+id/textView_causediseases"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="....." />
-
-            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -95,20 +96,19 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="อาการที่ควรไปพบแพทย์:" />
+                android:text="อาการที่ควรไปพบแพทย์อย่างเร่งด่วน:" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/textView_sysptominstantdiseases"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:text="....." />
 
-                <TextView
-                    android:id="@+id/textView_sysptominstantdiseases"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="....." />
-
-            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

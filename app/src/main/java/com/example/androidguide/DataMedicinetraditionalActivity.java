@@ -10,7 +10,8 @@ import android.widget.TextView;
 
 public class DataMedicinetraditionalActivity extends AppCompatActivity {
 	
-	TextView txt1, txt2;
+	private TextView txt1;
+	private TextView txt2;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +32,8 @@ public class DataMedicinetraditionalActivity extends AppCompatActivity {
 	}
 	
 	private void setWidget(){
-		txt1 = (TextView) findViewById(R.id.txt1_datamedicinetraditional);
-		txt2 = (TextView) findViewById(R.id.txt2_datamedicinetraditional);
+		txt1 = (TextView) findViewById(R.id.textView_datanamepharmaceutical);
+		txt2 = (TextView) findViewById(R.id.textView_detailstraditional);
 	}
 
 	@Override

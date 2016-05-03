@@ -18,11 +18,15 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import com.example.Mydatabase.CRUD;
 import com.example.adapter.CustomListAid;
 import com.example.controller.listener.RecyclerItemClickListener;
 import com.example.items.MyListAid;
+import com.example.model.AidModel;
+import com.example.model.TraditionalModel;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AIDActivity extends Fragment implements TextWatcher {
 	
@@ -30,10 +34,11 @@ public class AIDActivity extends Fragment implements TextWatcher {
 	private CustomListAid custom_adapter;
 	private RecyclerView recyclerView;
 	private EditText et_search;
-	private String[] txt;
+
+	private CRUD crud;
 	
-	private ArrayList<MyListAid> items;
-	private ArrayList<MyListAid> n_item;
+	private List<AidModel> items;
+	private List<AidModel> n_item;
 
 	public static AIDActivity newInstance(){
 		AIDActivity fragment = new AIDActivity();
@@ -49,38 +54,38 @@ public class AIDActivity extends Fragment implements TextWatcher {
 	public void onCreate(@Nullable Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		txt = new String[]{
-				getResources().getString(R.string.strCystitis),
-				getResources().getString(R.string.strGastroesophagealRefluxDisease),
-				getResources().getString(R.string.strTineaCorporis),
-				getResources().getString(R.string.strTineaVesicolor),
-				getResources().getString(R.string.strHordeolum),
-				getResources().getString(R.string.strCommonCold),
-				getResources().getString(R.string.strNauseaVomitting),
-				getResources().getString(R.string.strTineapedis),
-				getResources().getString(R.string.strTineaungium),
-				getResources().getString(R.string.strLeukorrhea),
-				getResources().getString(R.string.strConstipation),
-				getResources().getString(R.string.strDiarrhea),
-				getResources().getString(R.string.strDysmenorrhea),
-				getResources().getString(R.string.strToothache),
-				getResources().getString(R.string.strMigraine),
-				getResources().getString(R.string.strImpetigo),
-				getResources().getString(R.string.strEczema),
-				getResources().getString(R.string.strAphthousUlcer),
-				getResources().getString(R.string.strPoisoningfromPesticides),
-				getResources().getString(R.string.strSuppurativeWoundInfection),
-				getResources().getString(R.string.strPepticUlcer),
-				getResources().getString(R.string.strGnathostomiasis),
-				getResources().getString(R.string.strHerpesSimplex),
-				getResources().getString(R.string.strEpistaxis),
-				getResources().getString(R.string.strUrticaria),
-				getResources().getString(R.string.strGingivalBleeding),
-				getResources().getString(R.string.strVertigo),
-				getResources().getString(R.string.strMeasles),
-				getResources().getString(R.string.strGermanMeasles),
-				getResources().getString(R.string.strScabiasis)
-		};
+//		txt = new String[]{
+//				getResources().getString(R.string.strCystitis),
+//				getResources().getString(R.string.strGastroesophagealRefluxDisease),
+//				getResources().getString(R.string.strTineaCorporis),
+//				getResources().getString(R.string.strTineaVesicolor),
+//				getResources().getString(R.string.strHordeolum),
+//				getResources().getString(R.string.strCommonCold),
+//				getResources().getString(R.string.strNauseaVomitting),
+//				getResources().getString(R.string.strTineapedis),
+//				getResources().getString(R.string.strTineaungium),
+//				getResources().getString(R.string.strLeukorrhea),
+//				getResources().getString(R.string.strConstipation),
+//				getResources().getString(R.string.strDiarrhea),
+//				getResources().getString(R.string.strDysmenorrhea),
+//				getResources().getString(R.string.strToothache),
+//				getResources().getString(R.string.strMigraine),
+//				getResources().getString(R.string.strImpetigo),
+//				getResources().getString(R.string.strEczema),
+//				getResources().getString(R.string.strAphthousUlcer),
+//				getResources().getString(R.string.strPoisoningfromPesticides),
+//				getResources().getString(R.string.strSuppurativeWoundInfection),
+//				getResources().getString(R.string.strPepticUlcer),
+//				getResources().getString(R.string.strGnathostomiasis),
+//				getResources().getString(R.string.strHerpesSimplex),
+//				getResources().getString(R.string.strEpistaxis),
+//				getResources().getString(R.string.strUrticaria),
+//				getResources().getString(R.string.strGingivalBleeding),
+//				getResources().getString(R.string.strVertigo),
+//				getResources().getString(R.string.strMeasles),
+//				getResources().getString(R.string.strGermanMeasles),
+//				getResources().getString(R.string.strScabiasis)
+//		};
 
 	}
 
@@ -97,21 +102,14 @@ public class AIDActivity extends Fragment implements TextWatcher {
 	public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 		super.onViewCreated(view, savedInstanceState);
 		setWidget(view);
-
+		crud = new CRUD(getContext());
 		recyclerView.setHasFixedSize(true);
 		recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 		recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-		items = new ArrayList<MyListAid>();
-		n_item = new ArrayList<MyListAid>();
+		items = crud.selectAidAll();
+		n_item = crud.selectAidAll();
 
-		for(int i=0; i<txt.length; i++){
-			MyListAid data = new MyListAid();
-			data.setText(txt[i]);
-			items.add(data);
-			n_item.add(data);
-
-		}
 
 		custom_adapter = new CustomListAid(items);
 		recyclerView.setAdapter(custom_adapter);
@@ -122,8 +120,7 @@ public class AIDActivity extends Fragment implements TextWatcher {
 			@Override
 			public void onItemClick(View view, int position) {
 				Intent intent = new Intent(getActivity(), DataAidActivity.class);
-				intent.putExtra("text1", items.get(position).getText());
-				intent.putExtra("text2", "position : " + position);
+				intent.putExtra("text1", items.get(position).getDetails());
 				startActivity(intent);
 			}
 		}));
@@ -149,10 +146,11 @@ public class AIDActivity extends Fragment implements TextWatcher {
 		int txtlength = search.length();
 		if (n_item != null) {
 			if (txtlength > 0) {
-				ArrayList<MyListAid> appListSort = new ArrayList<MyListAid>();
+
+				List<AidModel> appListSort = new ArrayList<>();
 
 				for (int i = 0; i < n_item.size(); i++) {
-					String sApp = n_item.get(i).getText();
+					String sApp = n_item.get(i).getDetails();
 					if (txtlength <= sApp.length()) {
 						if (search.equalsIgnoreCase((String) sApp.subSequence(0, txtlength))) {
 							appListSort.add(n_item.get(i));

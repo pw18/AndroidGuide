@@ -5,7 +5,11 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.example.androidguide.AIDActivity;
+import com.example.model.AidModel;
 import com.example.model.DiseasesModel;
+import com.example.model.PhamaceuticalModel;
+import com.example.model.TraditionalModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,6 +62,61 @@ public class CRUD {
 		return data;
 	}
 
+	public List<PhamaceuticalModel> selectPhamaceuticalAll(){
+		List<PhamaceuticalModel> data = new ArrayList<>();
+		String query = "SELECT * FROM "+DatabaseGuide.DB_TABLE_MedicineModern;
+		Cursor cursor = db.rawQuery(query, null);
+		if(cursor.moveToFirst()){
+			if(cursor.getCount() != 0){
+				do{
+					PhamaceuticalModel model = new PhamaceuticalModel();
+					model.setName(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_ModName)));
+					model.setParallel(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_ModParallel)));
+					model.setDetails(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_ModDetails)));
+
+					data.add(model);
+				}while (cursor.moveToNext());
+			}
+		}
+
+		return data;
+	}
+
+	public List<TraditionalModel> selectTraditionalAll(){
+		List<TraditionalModel> data = new ArrayList<>();
+		String query = "SELECT * FROM "+DatabaseGuide.DB_TABLE_MedicineTraditional;
+		Cursor cursor = db.rawQuery(query, null);
+		if(cursor.moveToFirst()){
+			if(cursor.getCount() != 0){
+				do{
+					TraditionalModel model = new TraditionalModel();
+					model.setName(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_Tra_Name)));
+					model.setDetails(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_Tra_Details)));
+
+					data.add(model);
+				}while (cursor.moveToNext());
+			}
+		}
+
+		return data;
+	}
+
+	public List<AidModel> selectAidAll(){
+		List<AidModel> data = new ArrayList<>();
+		String query = "SELECT * FROM "+DatabaseGuide.DB_TABLE_FirstAid;
+		Cursor cursor = db.rawQuery(query, null);
+		if(cursor.moveToFirst()){
+			if(cursor.getCount() != 0){
+				do{
+					AidModel model = new AidModel();
+					model.setDetails(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_FirstAidDetails)));
 
 
+					data.add(model);
+				}while (cursor.moveToNext());
+			}
+		}
+
+		return data;
+	}
 }

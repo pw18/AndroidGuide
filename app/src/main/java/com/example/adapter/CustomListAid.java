@@ -1,6 +1,7 @@
 package com.example.adapter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -12,16 +13,17 @@ import android.widget.TextView;
 import com.example.androidguide.R;
 import com.example.items.MyListAid;
 import com.example.items.MyListMedicineTraditionalItem;
+import com.example.model.AidModel;
 import com.example.view.MyListAidItemViewHolder;
 import com.example.view.MyListMedicineTraditionalItemViewHolder;
 
 
 public class CustomListAid extends RecyclerView.Adapter<MyListAidItemViewHolder> {
-//	Context context;
 
-	ArrayList<MyListAid>items;
 
-	public CustomListAid( ArrayList<MyListAid> items) { this.items = items;}
+	List<AidModel> items;
+
+	public CustomListAid( List<AidModel> items) { this.items = items;}
 
 	@Override
 	public MyListAidItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -32,8 +34,8 @@ public class CustomListAid extends RecyclerView.Adapter<MyListAidItemViewHolder>
 
 	@Override
 	public void onBindViewHolder(MyListAidItemViewHolder holder, int position) {
-		MyListAid item = items.get(position);
-		holder.txt.setText(item.getText());
+		AidModel item = items.get(position);
+		holder.txt.setText(item.getDetails());
 	}
 
 	@Override
