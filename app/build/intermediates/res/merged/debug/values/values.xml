@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="strTitleProvince">
+        <item>ปริมณฑล</item>
+        <item>ภาคกลาง</item>
+        <item>ภาคเหนือ</item>
+        <item>ภาคใต้</item>
+        <item>ภาคตะวันออก</item>
+        <item>ภาคตะวันตก</item>
+        <item>ภาคตะวันออกเฉียงเหนือ</item>
+    </string-array>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>

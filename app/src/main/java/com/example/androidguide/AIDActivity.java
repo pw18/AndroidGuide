@@ -120,7 +120,8 @@ public class AIDActivity extends Fragment implements TextWatcher {
 			@Override
 			public void onItemClick(View view, int position) {
 				Intent intent = new Intent(getActivity(), DataAidActivity.class);
-				intent.putExtra("text1", items.get(position).getDetails());
+				intent.putExtra("text1", items.get(position).getName());
+				intent.putExtra("text2", items.get(position).getDetails());
 				startActivity(intent);
 			}
 		}));
@@ -150,7 +151,7 @@ public class AIDActivity extends Fragment implements TextWatcher {
 				List<AidModel> appListSort = new ArrayList<>();
 
 				for (int i = 0; i < n_item.size(); i++) {
-					String sApp = n_item.get(i).getDetails();
+					String sApp = n_item.get(i).getName();
 					if (txtlength <= sApp.length()) {
 						if (search.equalsIgnoreCase((String) sApp.subSequence(0, txtlength))) {
 							appListSort.add(n_item.get(i));

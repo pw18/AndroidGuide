@@ -35,7 +35,7 @@ public class CustomListAid extends RecyclerView.Adapter<MyListAidItemViewHolder>
 	@Override
 	public void onBindViewHolder(MyListAidItemViewHolder holder, int position) {
 		AidModel item = items.get(position);
-		holder.txt.setText(item.getDetails());
+		holder.txt.setText(item.getName());
 	}
 
 	@Override

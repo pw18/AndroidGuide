@@ -1,38 +1,40 @@
 package com.example.androidguide;
 
 import java.util.ArrayList;
-import com.example.items.MyListHospital;
+import java.util.List;
+
+import com.example.Mydatabase.CRUD;
+import com.example.Mydatabase.DatabaseGuide;
+import com.example.adapter.ProvinceAdapter;
+import com.example.model.HospitalModel;
+import com.example.model.ProvinceModel;
+
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-import android.widget.Toast;
 
 public class HospitalActivity extends Fragment implements AdapterView.OnItemSelectedListener {
 
-	private Spinner Realm;
-	private Spinner Bkk;
-	private Spinner North;
-	private Spinner South;
-	private Spinner East;
-	private Spinner West;
-	private Spinner NorthEast;
+	private String[] titleProvices;
+	private List<HospitalModel> items;
+	private List<ProvinceModel> listCentralRegion;
+	private List<ProvinceModel> listNorth;
+	private List<ProvinceModel> listNorthEast;
+	private List<ProvinceModel> listWest;
+	private List<ProvinceModel> listEast;
+	private List<ProvinceModel> listRealm;
+	private List<ProvinceModel> listSouth;
 
-	String[] txt_Realm;
-	String[] txt_Bkk;
-	String[] txt_North;
-	String[] txt_South;
-	String[] txt_East;
-	String[] txt_West ;
-	String[] txt_NorthEast;
-
-
-	ArrayList<MyListHospital> items;
+	private CRUD crud;
+	private RecyclerView recyclerView;
+	private ProvinceAdapter adapter;
 
 	public static HospitalActivity newInstance() {
 		HospitalActivity fragment = new HospitalActivity();
@@ -48,61 +50,37 @@ public class HospitalActivity extends Fragment implements AdapterView.OnItemSele
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		txt_Realm = new String[]{
-				getResources().getString(R.string.strProvinceNonthaburi),getResources().getString(R.string.strProvinceSamutPrakan),
-				getResources().getString(R.string.strProvincePathumThani)
-		};
-		txt_Bkk = new String[] {
-				getResources().getString(R.string.strProvinceBangkok),getResources().getString(R.string.strProvinceKamphaengPhet),
-				getResources().getString(R.string.strProvinceChainat),getResources().getString(R.string.strProvinceNakhonNayok),
-				getResources().getString(R.string.strProvinceNakhonPathom), getResources().getString(R.string.strProvinceNakhonSawan),
-				getResources().getString(R.string.strProvincePhraNakhonSriAyutthaya),getResources().getString(R.string.strProvincePichit),
-				getResources().getString(R.string.strProvincePhitsanulok),getResources().getString(R.string.strProvincePhetchabun),
-				getResources().getString(R.string.strProvinceLopburi),getResources().getString(R.string.strProvinceSamutSongkhram),
-				getResources().getString(R.string.strProvinceSamutsakorn),getResources().getString(R.string.strProvinceSingburi),
-				getResources().getString(R.string.strProvinceSukhothai),getResources().getString(R.string.strProvinceSuphanBuri)
-		};
-		txt_North = new String[]{
-				getResources().getString(R.string.strProvinceChiangRai),getResources().getString(R.string.strProvinceChiangMai),
-				getResources().getString(R.string.strProvinceNan),getResources().getString(R.string.strProvincePayao),
-				getResources().getString(R.string.strProvincePhrae),getResources().getString(R.string.strProvinceMaeHongSon),
-				getResources().getString(R.string.strProvinceLampang),getResources().getString(R.string.strProvinceLamphun),
-				getResources().getString(R.string.strProvinceUttaradit),
+		crud = new CRUD(getContext());
+		items = new ArrayList<>();
+		titleProvices = getResources().getStringArray(R.array.strTitleProvince);
+		listCentralRegion = crud.selectProvince(DatabaseGuide.Central);
+		listNorth = crud.selectProvince(DatabaseGuide.North);
+		listNorthEast = crud.selectProvince(DatabaseGuide.NorthEast);
+		listWest = crud.selectProvince(DatabaseGuide.West);
+		listEast = crud.selectProvince(DatabaseGuide.East);
+		listRealm = crud.selectProvince(DatabaseGuide.Realm);
+		listSouth = crud.selectProvince(DatabaseGuide.South);
 
-		};
-		txt_South = new String[]{
-				getResources().getString(R.string.strProvinceKrabi),getResources().getString(R.string.strProvinceChumphon),
-				getResources().getString(R.string.strProvinceTrang),getResources().getString(R.string.strProvinceNakhonSiThammarat),
-				getResources().getString(R.string.strProvinceNarathiwat),getResources().getString(R.string.strProvincePattani),
-				getResources().getString(R.string.strProvincePhangnga),getResources().getString(R.string.strProvincePhatthalung),
-				getResources().getString(R.string.strProvincePhuket),getResources().getString(R.string.strProvinceRanong),
-				getResources().getString(R.string.strProvinceSatun),getResources().getString(R.string.strProvinceSongkhla),
-				getResources().getString(R.string.strProvinceSuratThani),getResources().getString(R.string.strProvinceYala),
-		};
-		txt_East = new String[]{
-				getResources().getString(R.string.strProvinceChanthaburi),getResources().getString(R.string.strProvinceChachoengsao),
-				getResources().getString(R.string.strProvinceChonBuri),getResources().getString(R.string.strProvinceTrad),
-				getResources().getString(R.string.strProvincePrachinburi),getResources().getString(R.string.strProvinceRayong),
-				getResources().getString(R.string.strProvinceSaKaeo),
-		};
-		txt_West = new String[]{
-				getResources().getString(R.string.strProvinceKanchanaburi),
-				getResources().getString(R.string.strProvincePrachuapKhiriKhan),
-				getResources().getString(R.string.strProvinceTak), getResources().getString(R.string.strProvincePhetchaburi),
-				getResources().getString(R.string.strProvinceRatchaburi),
-		};
-		txt_NorthEast = new String[]{
-				getResources().getString(R.string.strProvinceKalasin),getResources().getString(R.string.strProvinceKhonKaen),
-				getResources().getString(R.string.strProvinceChaiyaphum),getResources().getString(R.string.strProvinceNakhonPhanom),
-				getResources().getString(R.string.strProvinceNakhonRatchasima),getResources().getString(R.string.strProvinceBungKan),
-				getResources().getString(R.string.strProvinceBuriram),getResources().getString(R.string.strProvinceMahaSarakham),
-				getResources().getString(R.string.strProvinceMukdahan),getResources().getString(R.string.strProvinceYasothon),
-				getResources().getString(R.string.strProvinceRoiEt),getResources().getString(R.string.strProvinceLoei),
-				getResources().getString(R.string.strProvinceSakonNakhon),getResources().getString(R.string.strProvinceSurin),
-				getResources().getString(R.string.strProvinceSisaket),getResources().getString(R.string.strProvinceNongkhai),
-				getResources().getString(R.string.strProvinceNongbualamphu),getResources().getString(R.string.strProvinceUdonThani),
-				getResources().getString(R.string.strProvinceUbonRatchathani),getResources().getString(R.string.strProvinceAmnatCharoen),
-		};
+		for (int i=0; i<titleProvices.length; i++){
+			HospitalModel model = new HospitalModel();
+			model.setTitle(titleProvices[i]);
+			if(i == 0)
+				model.setProvinceList(listRealm);
+			else if(i == 1)
+				model.setProvinceList(listCentralRegion);
+			else if(i == 2)
+				model.setProvinceList(listNorth);
+			else if(i == 3)
+				model.setProvinceList(listSouth);
+			else if(i == 4)
+				model.setProvinceList(listEast);
+			else if(i == 5)
+				model.setProvinceList(listWest);
+			else
+				model.setProvinceList(listNorthEast);
+
+			items.add(model);
+		}
 	}
 
 	@Nullable
@@ -111,7 +89,9 @@ public class HospitalActivity extends Fragment implements AdapterView.OnItemSele
 		View view = inflater.inflate(R.layout.activity_hospital, container, false);
 
 		setWidget(view);
+		init();
 
+		/*
 		ArrayAdapter<String> adapter_Realm = new ArrayAdapter<String>(getActivity(),
 				android.R.layout.simple_spinner_dropdown_item, txt_Realm);
 
@@ -144,6 +124,7 @@ public class HospitalActivity extends Fragment implements AdapterView.OnItemSele
 		NorthEast.setAdapter(adapter_NorthEast);
 
 		Realm.setOnItemSelectedListener(this);
+		*/
 
 		return view;
 	}
@@ -169,6 +150,8 @@ public class HospitalActivity extends Fragment implements AdapterView.OnItemSele
 	}
 
 	private void setWidget(View view) {
+		recyclerView = (RecyclerView) view.findViewById(R.id.recyclerViewHospital);
+		/*
 		Realm = (Spinner) view.findViewById(R.id.spinner_hosrealm);
 		Bkk = (Spinner) view.findViewById(R.id.spinner_hosbkk);
 		North = (Spinner) view.findViewById(R.id.spinner_hosnorth);
@@ -176,6 +159,17 @@ public class HospitalActivity extends Fragment implements AdapterView.OnItemSele
 		East = (Spinner) view.findViewById(R.id.spinner_hoseast);
 		West = (Spinner) view.findViewById(R.id.spinner_hoswest);
 		NorthEast = (Spinner) view.findViewById(R.id.spinner_hosnortheast);
+		*/
+	}
+
+	private void init(){
+		recyclerView.setHasFixedSize(true);
+		recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+		recyclerView.setItemAnimator(new DefaultItemAnimator());
+
+		adapter = new ProvinceAdapter(items);
+
+		recyclerView.setAdapter(adapter);
 	}
 
 }

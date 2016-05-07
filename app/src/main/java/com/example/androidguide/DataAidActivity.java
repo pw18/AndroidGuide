@@ -11,6 +11,7 @@ import android.widget.TextView;
 public class DataAidActivity extends AppCompatActivity {
 
 	private TextView txt1;
+	private TextView txt2;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -21,10 +22,12 @@ public class DataAidActivity extends AppCompatActivity {
 		Intent intent = getIntent();
 		if(intent != null){
 			String recive_txt1 = intent.getExtras().getString("text1");
+			String recive_txt2 = intent.getExtras().getString("text2");
 
 
-			if(recive_txt1 != null && recive_txt1 != null) {
+			if(recive_txt1 != null && recive_txt2 != null) {
 				txt1.setText(recive_txt1);
+				txt2.setText(recive_txt2);
 
 			}
 		}
@@ -33,25 +36,27 @@ public class DataAidActivity extends AppCompatActivity {
 
 	private void setWidget(){
 
-		txt1 = (TextView) findViewById(R.id.textView_datafirstaid);
-	}
+		txt1 = (TextView) findViewById(R.id.textView_namediseasesAid);
+		txt2 = (TextView) findViewById(R.id.textView_datafirstaid);
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.data_aid, menu);
-		return true;
 	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
+//
+//	@Override
+//	public boolean onCreateOptionsMenu(Menu menu) {
+//		// Inflate the menu; this adds items to the action bar if it is present.
+//		getMenuInflater().inflate(R.menu.data_aid, menu);
+//		return true;
+//	}
+//
+//	@Override
+//	public boolean onOptionsItemSelected(MenuItem item) {
+//		// Handle action bar item clicks here. The action bar will
+//		// automatically handle clicks on the Home/Up button, so long
+//		// as you specify a parent activity in AndroidManifest.xml.
+//		int id = item.getItemId();
+//		if (id == R.id.action_settings) {
+//			return true;
+//		}
+//		return super.onOptionsItemSelected(item);
+//	}
 }
