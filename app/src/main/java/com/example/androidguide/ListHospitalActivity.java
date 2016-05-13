@@ -20,7 +20,6 @@ public class ListHospitalActivity extends AppCompatActivity {
 	
 	
 	int[]_img ={android.R.drawable.ic_input_add};
-//	String[] txt = {"�����ç��Һ��","�������","������"};
 	String[] txt = {"test1","test2","test3"};
 	
 	ArrayList<MyListdataHospital> items;
