@@ -140,10 +140,12 @@
     <string name="strProvinceUbonRatchathani">Province UbonRatchathani</string>
     <string name="strProvinceAmnatCharoen">Province AmnatCharoen</string>
 
-    <string name="strDataAboutDeveloper">มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ \n เสนอโดย</string>
+    <string name="strDataAboutDeveloper">แอพพลิเคชั่นพัฒนาโดยนักศึกษาปริญญานิพนธ์จากมหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ\nเสนอโดย\nนางสาวพัชรา มาตย์สถิตย์ และ นางสาวปวีณา จำมะเทวี\nโดยมีอาจารย์ที่ปรึกษาหลักผู้ให้คำปรึกษาด้านการทำปริญญานิพนธ์คือ\nนางฐิติมา ช่วงชัย\nที่ปรึกษาร่วมผู้ให้คำปรึกษาและตรวจสอบด้านข้อมูลโรคทั้ง 30โรค
+    คือ\nเภสัชกรหญิงกชรัตน์ ชีวพฤกษ์\nข้อมูลโรคภายในแอพพลิเคชั่นได้นำข้อมูลมาจากหนังสือ\nรู้ทันโรครู้ทันหมอ เล่ม 1 และ รู้ทันโรครู้ทันหมอ เล่ม 2
+    \nผู้เขียน คือ นายแพทย์พินิจ ลิ้มสุคนธ์</string>
 
-    <string name="google_api_key">AIzaSyCQ07D9pwr1O1ZQPesTPPrnpPJubd81yA8</string>
-    
+    <string name="google_maps_key">AIzaSyCQ07D9pwr1O1ZQPesTPPrnpPJubd81yA8</string>
+
     <string-array name="strTitleProvince">
         <item>ปริมณฑล</item>
         <item>ภาคกลาง</item>

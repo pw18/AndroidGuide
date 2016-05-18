@@ -124,7 +124,14 @@ public class CRUD {
 
 	public List<ProvinceModel> selectProvince(int area){
 		List<ProvinceModel> data = new ArrayList<>();
-		String query = "SELECT a."+DatabaseGuide.DB_Province_id+ ", a."+DatabaseGuide.DB_Province_area_id+", a."+DatabaseGuide.DB_Province_Province +
+		ProvinceModel fModel = new ProvinceModel();
+		fModel.setId(0);
+		fModel.setAreaId(0);
+		fModel.setAreaName("Test Area");
+		fModel.setProvince("Select an item...");
+		data.add(fModel);
+		String query = "SELECT a."+DatabaseGuide.DB_Province_id+ ", a."+DatabaseGuide.DB_Province_area_id+
+				", a."+DatabaseGuide.DB_Province_Province + ", b."+ DatabaseGuide.DB_AREA_AREA +
 				" FROM "+DatabaseGuide.DB_TABLE_Province + " AS a, "+DatabaseGuide.DB_TABLE_AREA+ " AS b"+
 				" WHERE a."+DatabaseGuide.DB_Province_area_id+ " = b."+DatabaseGuide.DB_AREA_id +
 				" AND a."+DatabaseGuide.DB_Province_area_id+ " = "+area;
@@ -135,6 +142,7 @@ public class CRUD {
 					ProvinceModel model = new ProvinceModel();
 					model.setId(cursor.getInt(cursor.getColumnIndex(DatabaseGuide.DB_Province_id)));
 					model.setAreaId(cursor.getInt(cursor.getColumnIndex(DatabaseGuide.DB_Province_area_id)));
+					model.setAreaName(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_AREA_AREA)));
 					model.setProvince(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_Province_Province)));
 
 					data.add(model);
@@ -144,9 +152,11 @@ public class CRUD {
 		return data;
 	}
 
-	public List<HospitalProvinceModel> selectHospitalCentralRegion(){
+	public List<HospitalProvinceModel> selectHospitalCentralRegion(int areaId, String area){
 		List<HospitalProvinceModel> data = new ArrayList<>();
-		String query = "SELECT * FROM "+DatabaseGuide.DB_TABLE_HospitalCentralRegion;
+		String query = "SELECT * FROM "+DatabaseGuide.DB_TABLE_HospitalCentralRegion +
+				" WHERE Hos_Province_id = " + areaId +
+				" AND Hos_Province = " + "\""+area+"\"";
 		Cursor cursor = db.rawQuery(query, null);
 		if(cursor.moveToFirst()){
 			if(cursor.getCount() != 0){
@@ -158,6 +168,8 @@ public class CRUD {
 					model.setProvince(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalCentralRegion_Province)));
 					model.setArea(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalCentralRegion_Area)));
 					model.setPhone(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalCentralRegion_Phone)));
+					model.setLat(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalCentralRegion_Lat)));
+					model.setLng(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalCentralRegion_Long)));
 
 					data.add(model);
 				}while (cursor.moveToNext());
@@ -167,9 +179,11 @@ public class CRUD {
 		return data;
 	}
 
-	public List<HospitalProvinceModel> selectHospitalNorth(){
+	public List<HospitalProvinceModel> selectHospitalNorth(int areaId, String area){
 		List<HospitalProvinceModel> data = new ArrayList<>();
-		String query = "SELECT * FROM "+DatabaseGuide.DB_TABLE_HospitalNorth;
+		String query = "SELECT * FROM "+DatabaseGuide.DB_TABLE_HospitalNorth +
+				" WHERE Hos_Province_id = " + areaId +
+				" AND Hos_Province = " + "\""+area+"\"";
 		Cursor cursor = db.rawQuery(query, null);
 		if(cursor.moveToFirst()){
 			if(cursor.getCount() != 0){
@@ -181,6 +195,8 @@ public class CRUD {
 					model.setProvince(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalNorth_Province)));
 					model.setArea(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalNorth_Area)));
 					model.setPhone(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalNorth_Phone)));
+					model.setLat(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalNorth_Lat)));
+					model.setLng(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalNorth_Long)));
 
 					data.add(model);
 				}while (cursor.moveToNext());
@@ -190,9 +206,11 @@ public class CRUD {
 		return data;
 	}
 
-	public List<HospitalProvinceModel> selectHospitalEast(){
+	public List<HospitalProvinceModel> selectHospitalEast(int areaId, String area){
 		List<HospitalProvinceModel> data = new ArrayList<>();
-		String query = "SELECT * FROM "+DatabaseGuide.DB_TABLE_HospitalEast;
+		String query = "SELECT * FROM "+DatabaseGuide.DB_TABLE_HospitalEast +
+				" WHERE Hos_Province_id = " + areaId +
+				" AND Hos_Province = " + "\""+area+"\"";
 		Cursor cursor = db.rawQuery(query, null);
 		if(cursor.moveToFirst()){
 			if(cursor.getCount() != 0){
@@ -204,6 +222,8 @@ public class CRUD {
 					model.setProvince(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalEast_Province)));
 					model.setArea(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalEast_Area)));
 					model.setPhone(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalEast_Phone)));
+					model.setLat(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalEast_Lat)));
+					model.setLng(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalEast_Long)));
 
 					data.add(model);
 				}while (cursor.moveToNext());
@@ -213,9 +233,11 @@ public class CRUD {
 		return data;
 	}
 
-	public List<HospitalProvinceModel> selectHospitalWest(){
+	public List<HospitalProvinceModel> selectHospitalWest(int areaId, String area){
 		List<HospitalProvinceModel> data = new ArrayList<>();
-		String query = "SELECT * FROM "+DatabaseGuide.DB_TABLE_HospitalWest;
+		String query = "SELECT * FROM "+DatabaseGuide.DB_TABLE_HospitalWest +
+				" WHERE Hos_Province_id = " + areaId +
+				" AND Hos_Province = " + "\""+area+"\"";
 		Cursor cursor = db.rawQuery(query, null);
 		if(cursor.moveToFirst()){
 			if(cursor.getCount() != 0){
@@ -227,6 +249,8 @@ public class CRUD {
 					model.setProvince(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalWest_Province)));
 					model.setArea(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalWest_Area)));
 					model.setPhone(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalWest_Phone)));
+					model.setLat(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalWest_Lat)));
+					model.setLng(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalWest_Long)));
 
 					data.add(model);
 				}while (cursor.moveToNext());
@@ -236,9 +260,11 @@ public class CRUD {
 		return data;
 	}
 
-	public List<HospitalProvinceModel> selectHospitalNorthEast(){
+	public List<HospitalProvinceModel> selectHospitalNorthEast(int areaId, String area){
 		List<HospitalProvinceModel> data = new ArrayList<>();
-		String query = "SELECT * FROM "+DatabaseGuide.DB_TABLE_HospitalNorthEast;
+		String query = "SELECT * FROM "+DatabaseGuide.DB_TABLE_HospitalNorthEast +
+				" WHERE Hos_Province_id = " + areaId +
+				" AND Hos_Province = " + "\""+area+"\"";
 		Cursor cursor = db.rawQuery(query, null);
 		if(cursor.moveToFirst()){
 			if(cursor.getCount() != 0){
@@ -250,6 +276,8 @@ public class CRUD {
 					model.setProvince(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalNorthEast_Province)));
 					model.setArea(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalNorthEast_Area)));
 					model.setPhone(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalNorthEast_Phone)));
+					model.setLat(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalNorthEast_Lat)));
+					model.setLng(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalNorthEast_Long)));
 
 					data.add(model);
 				}while (cursor.moveToNext());
@@ -259,20 +287,25 @@ public class CRUD {
 		return data;
 	}
 
-	public List<HospitalProvinceModel> selectHospitalRealm(){
+	public List<HospitalProvinceModel> selectHospitalRealm(int areaId, String area){
 		List<HospitalProvinceModel> data = new ArrayList<>();
-		String query = "SELECT * FROM "+DatabaseGuide.DB_TABLE_HospitalRealm;
+		String query = "SELECT * FROM "+DatabaseGuide.DB_TABLE_HospitalRealm +
+				" WHERE Hos_Province_id = " + areaId +
+				" AND Hos_Province = " + "\""+area+"\"";
 		Cursor cursor = db.rawQuery(query, null);
 		if(cursor.moveToFirst()){
 			if(cursor.getCount() != 0){
 				do{
 					HospitalProvinceModel model = new HospitalProvinceModel();
 					model.setId(cursor.getInt(cursor.getColumnIndex(DatabaseGuide.DB_HospitalRealm_ID)));
+					model.setAreaId(cursor.getInt(cursor.getColumnIndex(DatabaseGuide.DB_HospitalRealm_province_id)));
 					model.setName(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalRealm_Name)));
 					model.setAddress(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalRealm_Address)));
 					model.setProvince(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalRealm_Province)));
 					model.setArea(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalRealm_Area)));
 					model.setPhone(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalRealm_Phone)));
+					model.setLat(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalRealm_Lat)));
+					model.setLng(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalRealm_Long)));
 
 					data.add(model);
 				}while (cursor.moveToNext());
@@ -282,13 +315,15 @@ public class CRUD {
 		return data;
 	}
 
-	public List<HospitalProvinceModel> selectHospitalSouth(){
+	public List<HospitalProvinceModel> selectHospitalSouth(int areaId, String area){
 		List<HospitalProvinceModel> data = new ArrayList<>();
-		String query = "SELECT * FROM "+DatabaseGuide.DB_TABLE_HospitalSouth;
+		String query = "SELECT * FROM "+DatabaseGuide.DB_TABLE_HospitalSouth +
+					" WHERE Hos_Province_id = " + areaId +
+					" AND Hos_Province = " + "\""+area+"\"";
 		Cursor cursor = db.rawQuery(query, null);
 		if(cursor.moveToFirst()){
-			if(cursor.getCount() != 0){
-				do{
+			if(cursor.getCount() != 0) {
+				do {
 					HospitalProvinceModel model = new HospitalProvinceModel();
 					model.setId(cursor.getInt(cursor.getColumnIndex(DatabaseGuide.DB_HospitalSouth_ID)));
 					model.setName(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalSouth_Name)));
@@ -296,6 +331,8 @@ public class CRUD {
 					model.setProvince(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalSouth_Province)));
 					model.setArea(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalSouth_Area)));
 					model.setPhone(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalSouth_Phone)));
+					model.setLat(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalSouth_Lat)));
+					model.setLng(cursor.getString(cursor.getColumnIndex(DatabaseGuide.DB_HospitalSouth_Long)));
 
 					data.add(model);
 				}while (cursor.moveToNext());
@@ -303,6 +340,6 @@ public class CRUD {
 		}
 
 		return data;
-		
+
 	}
 }

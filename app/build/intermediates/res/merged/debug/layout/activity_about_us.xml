@@ -10,8 +10,23 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".AboutUsActivity" >
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logokingmongkuts"/>
+
+    </LinearLayout>
+
     <TextView
         android:id="@+id/textView1"
+        android:textStyle="bold"
+        android:textSize="15sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -22,13 +37,92 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingTop="10dp">
 
     <TextView
         android:id="@+id/textView_dataaboutadmin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/strDataAboutDeveloper" />
+        android:text="มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ภาควิชาการจัดการเทคโนโลยีการผลิตและสารสนเทศ"
+            android:paddingTop="10dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="อาจารย์ที่ปรึกษาปริญญานิพนธ์หลัก:"
+            android:paddingTop="10dp"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="นางฐิติมา ช่วงชัย"
+            android:paddingTop="10dp"
+            android:textSize="14sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="อาจารย์ที่ปรึกษาปริญญานิพนธ์ร่วม:"
+            android:paddingTop="10dp"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="เภสัชกรหญิงกชรัตน์ ชีวพฤกษ์"
+            android:paddingTop="10dp"
+            android:textSize="14sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ข้อมูลโรค30โรค:"
+            android:paddingTop="10dp"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="หนังสือรู้ทันโรครู้ทันหมอ เล่มที่ 1
+                                หนังสือรู้ทันโรครู้ทันหมอ เล่มที่ 2"
+            android:paddingTop="10dp"
+            android:textSize="14sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="เขียนโดย:นายแพทย์พินิจ ลิ้มสุคนธ์"
+            android:paddingTop="10dp"
+            android:textSize="14sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ผู้จัดทำ:"
+            android:paddingTop="10dp"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="นางสาวพัชรา มาตย์สถิตย์ นักศึกษาชั้นปีที่ 4
+                          นางสาวปวีณา จำมะเทวี นักศึกษาชั้นปีที่ 4"
+            android:paddingTop="10dp"
+            android:textSize="14sp" />
+
+        /*android:text="@string/strDataAboutDeveloper" />
 
 
     </LinearLayout>
