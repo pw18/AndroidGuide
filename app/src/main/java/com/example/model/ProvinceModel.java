@@ -7,6 +7,7 @@ public class ProvinceModel {
 
     private int id;
     private int areaId;
+    private String areaName;
     private String province;
 
     public int getId() {
@@ -23,6 +24,12 @@ public class ProvinceModel {
 
     public void setAreaId(int areaId) {
         this.areaId = areaId;
+    }
+
+    public String getAreaName() { return areaName; }
+
+    public void setAreaName(String areaName) {
+        this.areaName = areaName;
     }
 
     public String getProvince() {

@@ -1,5 +1,7 @@
 package com.example.androidguide;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,9 +9,13 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -32,7 +38,7 @@ import org.json.JSONArray;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListDiseasesActivity extends Fragment implements TextWatcher{
+public class ListDiseasesActivity extends Fragment implements TextWatcher, SearchView.OnQueryTextListener{
 
     private CustomListDiseases custom_adapter;
     private RecyclerView recyclerView;
@@ -44,6 +50,8 @@ public class ListDiseasesActivity extends Fragment implements TextWatcher{
     private List<DiseasesModel> n_item;
     private CRUD crud;
 
+    private SearchView searchView = null;
+
     public static ListDiseasesActivity newInstance() {
         ListDiseasesActivity fragment = new ListDiseasesActivity();
 
@@ -54,9 +62,30 @@ public class ListDiseasesActivity extends Fragment implements TextWatcher{
 
     }
 
+//    @Override
+//    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+//        super.onCreateOptionsMenu(menu, inflater);
+//
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem n_item) {
+//        switch (n_item.getItemId()){
+//            case R.id.action_search:
+//                return  false;
+//            case R.id.recyclerView_diseases_listdiseases:
+//                return  true;
+//            default:
+//                break;
+//        }
+//        return  false;
+//
+//    }
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
     }
 
     @Nullable
@@ -185,5 +214,71 @@ public class ListDiseasesActivity extends Fragment implements TextWatcher{
     @Override
     public void afterTextChanged(Editable s) {
 
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.main_menu, menu);
+        MenuItem search = menu.findItem(R.id.action_search);
+        SearchManager searchManager = (SearchManager) getActivity().getSystemService(Context.SEARCH_SERVICE);
+
+        if (search != null)
+            searchView = (SearchView) search.getActionView();
+        if (searchView != null)
+            searchView.setSearchableInfo(searchManager.getSearchableInfo(getActivity().getComponentName()));
+        searchView.setOnQueryTextListener(this);
+
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_search:
+                // Not implemented here
+                return false;
+            default:
+                break;
+        }
+        searchView.setOnQueryTextListener(this);
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String newText) {
+        int txtlength = newText.length();
+        if (n_item != null) {
+            if (txtlength > 0) {
+                List<DiseasesModel> appListSort = new ArrayList<>();
+
+                for (int i = 0; i < n_item.size(); i++) {
+                    String sApp = n_item.get(i).getName();
+                    if (txtlength <= sApp.length()) {
+                        if (newText.equalsIgnoreCase((String) sApp
+                                .subSequence(0, txtlength))) {
+                            appListSort.add(n_item.get(i));
+                        }
+                    }
+                }
+
+                items.clear();
+                for (int i = 0; i < appListSort.size(); i++) {
+                    items.add(appListSort.get(i));
+                }
+
+            } else {
+                items.clear();
+                for (int i = 0; i < n_item.size(); i++) {
+                    items.add(n_item.get(i));
+                }
+            }
+            custom_adapter.notifyDataSetChanged();
+        }
+        return true;
     }
 }

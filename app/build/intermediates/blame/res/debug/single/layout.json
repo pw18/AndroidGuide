@@ -1,15 +1,15 @@
 [
     {
-        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
-        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\layout\\design_layout_tab_icon.xml"
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_medicine_traditional.xml",
         "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\layout\\activity_medicine_traditional.xml"
     },
     {
-        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
-        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_list_menu_item_radio.xml"
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\layout\\design_layout_tab_icon.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
@@ -46,6 +46,10 @@
     {
         "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar.xml",
         "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\layout\\design_layout_snackbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_item_prediction.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\layout\\place_autocomplete_item_prediction.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
@@ -164,6 +168,10 @@
         "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_item_powered_by_google.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\layout\\place_autocomplete_item_powered_by_google.xml"
+    },
+    {
         "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
         "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\notification_media_cancel_action.xml"
     },
@@ -190,6 +198,14 @@
     {
         "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\layout\\custom_listview_listhospital.xml",
         "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\layout\\custom_listview_listhospital.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_map.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\layout\\fragment_map.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_maps.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\src\\main\\res\\layout\\activity_maps.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_item_province_spinner.xml",
@@ -270,6 +286,14 @@
     {
         "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
         "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\notification_media_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_fragment.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\layout\\place_autocomplete_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_progress.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\layout\\place_autocomplete_progress.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\AndroidGuide\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",

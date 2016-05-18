@@ -100,7 +100,7 @@ public class DatabaseGuide extends SQLiteOpenHelper {
 	public static String DB_HospitalWest_Area ="Hos_Area";
 	public static String DB_HospitalWest_Phone ="Hos_Phone";
 	public static String DB_HospitalWest_Lat ="Hos_Lat";
-	public static String DB_HospitalWest_Long ="Hos_long";
+	public static String DB_HospitalWest_Long ="Hos_Long";
 	
 	String SQL_TABLE_HospitalWest = "CREATE TABLE IF NOT EXISTS " + DB_TABLE_HospitalWest + "(" +
 			DB_HospitalWest_ID+" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, "+
@@ -124,7 +124,7 @@ public class DatabaseGuide extends SQLiteOpenHelper {
 	public static String DB_HospitalCentralRegion_Area ="Hos_Area";
 	public static String DB_HospitalCentralRegion_Phone ="Hos_Phone";
 	public static String DB_HospitalCentralRegion_Lat ="Hos_Lat";
-	public static String DB_HospitalCentralRegion_Long ="Hos_long";
+	public static String DB_HospitalCentralRegion_Long ="Hos_Long";
 
 	String SQL_TABLE_HospitalCentralRegion = "CREATE TABLE IF NOT EXISTS " + DB_TABLE_HospitalCentralRegion + "(" +
 			DB_HospitalCentralRegion_ID+" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, "+
@@ -146,7 +146,7 @@ public class DatabaseGuide extends SQLiteOpenHelper {
 	public static String DB_HospitalEast_Area ="Hos_Area";
 	public static String DB_HospitalEast_Phone ="Hos_Phone";
 	public static String DB_HospitalEast_Lat ="Hos_Lat";
-	public static String DB_HospitalEast_Long ="Hos_long";
+	public static String DB_HospitalEast_Long ="Hos_Long";
 
 
 	String SQL_TABLE_HospitalEast = "CREATE TABLE IF NOT EXISTS " + DB_TABLE_HospitalEast + "(" +
@@ -170,7 +170,7 @@ public class DatabaseGuide extends SQLiteOpenHelper {
 	public static String DB_HospitalNorth_Area ="Hos_Area";
 	public static String DB_HospitalNorth_Phone ="Hos_Phone";
 	public static String DB_HospitalNorth_Lat ="Hos_Lat";
-	public static String DB_HospitalNorth_Long ="Hos_long";
+	public static String DB_HospitalNorth_Long ="Hos_Long";
 
 	String SQL_TABLE_HospitalNorth = "CREATE TABLE IF NOT EXISTS " + DB_TABLE_HospitalNorth+ "(" +
 			DB_HospitalNorth_ID+" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, "+
@@ -192,7 +192,7 @@ public class DatabaseGuide extends SQLiteOpenHelper {
 	public static String DB_HospitalRealm_Area ="Hos_Area";
 	public static String DB_HospitalRealm_Phone ="Hos_Phone";
 	public static String DB_HospitalRealm_Lat ="Hos_Lat";
-	public static String DB_HospitalRealm_Long ="Hos_long";
+	public static String DB_HospitalRealm_Long ="Hos_Long";
 
 	String SQL_TABLE_HospitalRealm = "CREATE TABLE IF NOT EXISTS " + DB_TABLE_HospitalRealm+ "(" +
 			DB_HospitalRealm_ID+" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, "+
@@ -214,7 +214,7 @@ public class DatabaseGuide extends SQLiteOpenHelper {
 	public static String DB_HospitalSouth_Area ="Hos_Area";
 	public static String DB_HospitalSouth_Phone ="Hos_Phone";
 	public static String DB_HospitalSouth_Lat ="Hos_Lat";
-	public static String DB_HospitalSouth_Long ="Hos_long";
+	public static String DB_HospitalSouth_Long ="Hos_Long";
 
 	String SQL_TABLE_HospitalSouth = "CREATE TABLE IF NOT EXISTS " + DB_TABLE_HospitalSouth+ "(" +
 			DB_HospitalSouth_ID+" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, "+
@@ -237,7 +237,7 @@ public class DatabaseGuide extends SQLiteOpenHelper {
 	public static String DB_HospitalNorthEast_Area ="Hos_Area";
 	public static String DB_HospitalNorthEast_Phone ="Hos_Phone";
 	public static String DB_HospitalNorthEast_Lat ="Hos_Lat";
-	public static String DB_HospitalNorthEast_Long ="Hos_long";
+	public static String DB_HospitalNorthEast_Long ="Hos_Long";
 
 	String SQL_TABLE_HospitalNorthEast = "CREATE TABLE IF NOT EXISTS " + DB_TABLE_HospitalNorthEast+ "(" +
 			DB_HospitalNorthEast_ID+" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, "+

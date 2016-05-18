@@ -9,13 +9,16 @@ import com.example.adapter.ProvinceAdapter;
 import com.example.model.HospitalModel;
 import com.example.model.ProvinceModel;
 
+import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -35,6 +38,7 @@ public class HospitalActivity extends Fragment implements AdapterView.OnItemSele
 	private CRUD crud;
 	private RecyclerView recyclerView;
 	private ProvinceAdapter adapter;
+	private boolean flagFirstTime = false;
 
 	public static HospitalActivity newInstance() {
 		HospitalActivity fragment = new HospitalActivity();
@@ -131,17 +135,7 @@ public class HospitalActivity extends Fragment implements AdapterView.OnItemSele
 
 	@Override
 	public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//		switch (parent.getId()){
-//			case R.id.spinner_hosrealm:
-//				if(position == 0)
-//					Toast.makeText(getActivity(), "Test", Toast.LENGTH_SHORT).show();
-//				else if(position == 1)
-//					Toast.makeText(getActivity(), "Test1", Toast.LENGTH_SHORT).show();
-//				break;
-//			case R.id.spinner_hosbkk:
-//				Toast.makeText(getActivity(), "Test11111", Toast.LENGTH_SHORT).show();
-//				break;
-//		}
+
 	}
 
 	@Override
@@ -167,7 +161,34 @@ public class HospitalActivity extends Fragment implements AdapterView.OnItemSele
 		recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 		recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-		adapter = new ProvinceAdapter(items);
+		adapter = new ProvinceAdapter(getContext(), items, new View.OnTouchListener() {
+			@Override
+			public boolean onTouch(View v, MotionEvent event) {
+				flagFirstTime = true;
+				return false;
+			}
+		}, new AdapterView.OnItemSelectedListener() {
+			@Override
+			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+				if(flagFirstTime) {
+					ProvinceModel provinceModel = (ProvinceModel) parent.getItemAtPosition(position);
+					Log.i("HospitalModel", provinceModel.getProvince());
+					Log.i("HospitalModel", "------------------------");
+
+					Intent intent = new Intent(getContext(), MapsActivity.class);
+					intent.putExtra("area_id", provinceModel.getAreaId());
+					intent.putExtra("area_name", provinceModel.getAreaName());
+					intent.putExtra("province", provinceModel.getProvince());
+					startActivity(intent);
+				}
+				flagFirstTime = false;
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> parent) {
+
+			}
+		});
 
 		recyclerView.setAdapter(adapter);
 	}

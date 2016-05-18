@@ -6,11 +6,14 @@ package com.example.model;
 public class HospitalProvinceModel {
 
     private int id;
+    private int areaId;
     private String name;
     private String address;
     private String province;
     private String area;
     private String phone;
+    private String lat;
+    private String lng;
 
     public int getId() {
         return id;
@@ -58,5 +61,29 @@ public class HospitalProvinceModel {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public int getAreaId() {
+        return areaId;
+    }
+
+    public void setAreaId(int areaId) {
+        this.areaId = areaId;
+    }
+
+    public String getLat() {
+        return lat;
+    }
+
+    public void setLat(String lat) {
+        this.lat = lat;
+    }
+
+    public String getLng() {
+        return lng;
+    }
+
+    public void setLng(String lng) {
+        this.lng = lng;
     }
 }
