@@ -15,13 +15,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-
       <TextView
         android:id="@+id/textView_listpharmaceutical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium"
+          android:layout_gravity="center"
         android:textColor="#000000" />
 
     </LinearLayout>

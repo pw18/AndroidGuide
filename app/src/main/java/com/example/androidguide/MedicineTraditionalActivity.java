@@ -1,5 +1,7 @@
 package com.example.androidguide;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,9 +9,13 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -23,16 +29,17 @@ import com.example.adapter.CustomListMedicineTraditional;
 import com.example.adapter.CustomListPharmaceutical;
 import com.example.controller.listener.RecyclerItemClickListener;
 import com.example.items.MyListMedicineTraditionalItem;
+import com.example.model.DiseasesModel;
 import com.example.model.TraditionalModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MedicineTraditionalActivity extends Fragment implements TextWatcher {
+public class MedicineTraditionalActivity extends Fragment implements TextWatcher,SearchView.OnQueryTextListener {
 
 	private CustomListMedicineTraditional custom_adapter;
 	private RecyclerView recyclerView;
-	private EditText et_search;
+	private SearchView searchView = null;
 
 	private CRUD crud;
 	private List<TraditionalModel> items;
@@ -51,39 +58,7 @@ public class MedicineTraditionalActivity extends Fragment implements TextWatcher
 	@Override
 	public void onCreate(@Nullable Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-//
-//		txt = new String[]{
-//				getResources().getString(R.string.strCystitis),
-//				getResources().getString(R.string.strGastroesophagealRefluxDisease),
-//				getResources().getString(R.string.strTineaCorporis),
-//				getResources().getString(R.string.strTineaVesicolor),
-//				getResources().getString(R.string.strHordeolum),
-//				getResources().getString(R.string.strCommonCold),
-//				getResources().getString(R.string.strNauseaVomitting),
-//				getResources().getString(R.string.strTineapedis),
-//				getResources().getString(R.string.strTineaungium),
-//				getResources().getString(R.string.strLeukorrhea),
-//				getResources().getString(R.string.strConstipation),
-//				getResources().getString(R.string.strDiarrhea),
-//				getResources().getString(R.string.strDysmenorrhea),
-//				getResources().getString(R.string.strToothache),
-//				getResources().getString(R.string.strMigraine),
-//				getResources().getString(R.string.strImpetigo),
-//				getResources().getString(R.string.strEczema),
-//				getResources().getString(R.string.strAphthousUlcer),
-//				getResources().getString(R.string.strPoisoningfromPesticides),
-//				getResources().getString(R.string.strSuppurativeWoundInfection),
-//				getResources().getString(R.string.strPepticUlcer),
-//				getResources().getString(R.string.strGnathostomiasis),
-//				getResources().getString(R.string.strHerpesSimplex),
-//				getResources().getString(R.string.strEpistaxis),
-//				getResources().getString(R.string.strUrticaria),
-//				getResources().getString(R.string.strGingivalBleeding),
-//				getResources().getString(R.string.strVertigo),
-//				getResources().getString(R.string.strMeasles),
-//				getResources().getString(R.string.strGermanMeasles),
-//				getResources().getString(R.string.strScabiasis)
-//		};
+		setHasOptionsMenu(true);
 
 	}
 	@Nullable
@@ -110,7 +85,6 @@ public class MedicineTraditionalActivity extends Fragment implements TextWatcher
 
 		recyclerView.setAdapter(custom_adapter);
 
-		et_search.addTextChangedListener(this);
 
 		recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getContext(), new
 				RecyclerItemClickListener.OnItemClickListener() {
@@ -129,7 +103,7 @@ public class MedicineTraditionalActivity extends Fragment implements TextWatcher
 	private void setWidget(View view) {
 		// TODO Auto-generated method stub
 		recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView_medicinetraditional_listdiseases);
-		et_search = (EditText) view.findViewById(R.id.editText_search_medicinetraditional);
+
 	}
 
 	@Override
@@ -139,35 +113,6 @@ public class MedicineTraditionalActivity extends Fragment implements TextWatcher
 
 	@Override
 	public void onTextChanged(CharSequence s, int start, int before, int count) {
-		String search = et_search.getText().toString();
-		int txtlength = search.length();
-
-		if(n_item != null){
-			if(txtlength > 0){
-
-				List<TraditionalModel> appListSort = new ArrayList<>();
-
-				for(int i=0; i<n_item.size(); i++){
-					String sApp = n_item.get(i).getName();
-					if(txtlength <= sApp.length()){
-						if(search.equalsIgnoreCase((String) sApp.subSequence(0, txtlength))){
-							appListSort.add(n_item.get(i));
-						}
-					}
-				}
-				items.clear();
-				for(int i=0; i<appListSort.size(); i++){
-					items.add(appListSort.get(i));
-				}
-
-			}else{
-				items.clear();
-				for(int i=0; i<n_item.size(); i++){
-					items.add(n_item.get(i));
-				}
-			}
-			custom_adapter.notifyDataSetChanged();
-		}
 
 	}
 
@@ -175,4 +120,70 @@ public class MedicineTraditionalActivity extends Fragment implements TextWatcher
 	public void afterTextChanged(Editable s) {
 
 	}
+
+	@Override
+	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+		inflater.inflate(R.menu.main_menu, menu);
+		MenuItem search = menu.findItem(R.id.action_search);
+		SearchManager searchManager = (SearchManager) getActivity().getSystemService(Context.SEARCH_SERVICE);
+
+		if (search != null)
+			searchView = (SearchView) search.getActionView();
+		if (searchView != null)
+			searchView.setSearchableInfo(searchManager.getSearchableInfo(getActivity().getComponentName()));
+		searchView.setOnQueryTextListener(this);
+
+		super.onCreateOptionsMenu(menu, inflater);
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+			case R.id.action_search:
+				// Not implemented here
+				return false;
+			default:
+				break;
+		}
+		searchView.setOnQueryTextListener(this);
+		return super.onOptionsItemSelected(item);
+	}
+	@Override
+	public boolean onQueryTextSubmit(String query) {
+		return false;
+	}
+
+	@Override
+	public boolean onQueryTextChange(String newText) {
+		int txtlength = newText.length();
+		if (n_item != null) {
+			if (txtlength > 0) {
+				List<TraditionalModel> appListSort = new ArrayList<>();
+
+				for (int i = 0; i < n_item.size(); i++) {
+					String sApp = n_item.get(i).getName();
+					if (txtlength <= sApp.length()) {
+						if (newText.equalsIgnoreCase((String) sApp
+								.subSequence(0, txtlength))) {
+							appListSort.add(n_item.get(i));
+						}
+					}
+				}
+
+				items.clear();
+				for (int i = 0; i < appListSort.size(); i++) {
+					items.add(appListSort.get(i));
+				}
+
+			} else {
+				items.clear();
+				for (int i = 0; i < n_item.size(); i++) {
+					items.add(n_item.get(i));
+				}
+			}
+			custom_adapter.notifyDataSetChanged();
+		}
+		return true;
+	}
+
 }

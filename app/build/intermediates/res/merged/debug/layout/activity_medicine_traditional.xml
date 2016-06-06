@@ -9,39 +9,6 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     tools:context="com.example.androidguide.MedicineTraditionalActivity" >
 
-    <EditText
-        android:id="@+id/editText_search_medicinetraditional"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@android:drawable/ic_menu_search"
-        android:ems="10"
-        android:hint="ค้นหาชื่อโรค" >
-
-        <requestFocus />
-    </EditText>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-        <ImageView
-            android:id="@+id/imageView_iconhospital"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_medtraditional" />
-
-        <TextView
-            android:id="@+id/textView_listraditional"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="30dp"
-            android:text="ยาแผนโบราณ"
-            android:textSize="20sp" />
-
-    </LinearLayout>
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView_medicinetraditional_listdiseases"
         android:scrollbars="vertical"

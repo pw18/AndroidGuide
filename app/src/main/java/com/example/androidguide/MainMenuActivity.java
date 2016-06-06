@@ -43,6 +43,8 @@ public class MainMenuActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.content, new InformationFragment().newInstance()).commit();
     }
 
     @Override
@@ -82,7 +84,9 @@ public class MainMenuActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         Fragment fragment = null;
-        if (id == R.id.menu_diseases) {
+        if(id == R.id.menu_info) {
+            fragment = InformationFragment.newInstance();
+        } else if (id == R.id.menu_diseases) {
             fragment = ListDiseasesActivity.newInstance();
         } else if (id == R.id.menu_medmodern) {
             fragment = PharmaceuticalActivity.newInstance();
@@ -94,11 +98,13 @@ public class MainMenuActivity extends AppCompatActivity
             fragment = HospitalActivity.newInstance();
         } else if (id == R.id.menu_developer) {
             fragment = AboutUsActivity.newInstance();
-        } else if (id == R.id.menu_copydb) {
+        }
+        /*
+        else if (id == R.id.menu_copydb) {
             fragment = null;
-//            ContextWrapper cw = new ContextWrapper(getApplicationContext());
-//            String DB_PATH = cw.getFilesDir().getAbsolutePath() + "/databases/"; //edited to databases
-//            copyDataBase(DB_PATH);
+            ContextWrapper cw = new ContextWrapper(getApplicationContext());
+            String DB_PATH = cw.getFilesDir().getAbsolutePath() + "/databases/"; //edited to databases
+            copyDataBase(DB_PATH);
             CRUD crud = new CRUD(getApplicationContext());
             if(crud.testInsert() != -1)
                 Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
@@ -107,6 +113,7 @@ public class MainMenuActivity extends AppCompatActivity
 
             drawer.closeDrawers();
         }
+        */
         FragmentManager manager = getSupportFragmentManager();
         if (fragment != null) {
             FragmentTransaction transaction = manager.beginTransaction().replace(R.id.content, fragment);

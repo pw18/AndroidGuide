@@ -3,6 +3,11 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/menu_info"
+            android:icon="@drawable/ic_diseases"
+            android:title="Info" />
+
+        <item
             android:id="@+id/menu_diseases"
             android:icon="@drawable/ic_diseases"
             android:title="@string/strGlobalDiseases" />
@@ -27,10 +32,10 @@
             android:icon="@drawable/ic_developer"
             android:title="@string/strGlobalAboutDeveloper" />
 
-        <item
-            android:id="@+id/menu_copydb"
-            android:icon="@drawable/ic_developer"
-            android:title="copy db" />
+        <!--<item-->
+            <!--android:id="@+id/menu_copydb"-->
+            <!--android:icon="@drawable/ic_developer"-->
+            <!--android:title="copy db" />-->
 
     </group>
 

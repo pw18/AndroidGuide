@@ -9,36 +9,6 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     tools:context="com.example.androidguide.AIDActivity" >
 
-    <EditText
-        android:id="@+id/editText_search_aid"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@android:drawable/ic_menu_search"
-        android:ems="10"
-        android:hint="ค้นหาชื่อโรค"
-        android:paddingLeft="5dp" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_firstaid" />
-
-        <TextView
-            android:id="@+id/textView_listview_listaid"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="การปฐมพยาบาลและการปฏิบัติตัว"
-            android:textSize="15sp" />
-
-    </LinearLayout>
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView_firstaid_listdiseases"
         android:scrollbars="vertical"

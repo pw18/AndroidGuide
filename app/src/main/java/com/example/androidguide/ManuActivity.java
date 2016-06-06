@@ -25,7 +25,7 @@ int[] _img = {android.R.drawable.ic_input_add,
 		android.R.drawable.ic_input_add,
 		android.R.drawable.ic_input_add,
 		android.R.drawable.ic_input_add};
-//	String[] txt = {"�ä","��Ἱ�Ѩ�غѹ","��Ἱ��ҳ","��û����Һ����С�û�ԺѵԵ��","�ç��Һ��","����ǡѺ"};
+
 	String[] txt = {"test1","test2","test3","test4","test5"};
 	ArrayList<MyListMenuItem> items;
 

@@ -9,39 +9,6 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     tools:context="com.example.androidguide.PharmaceuticalActivity" >
 
-    <EditText
-        android:id="@+id/editText_search_pharmaceutical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@android:drawable/ic_menu_search"
-        android:ems="10"
-        android:hint="ค้นหาชื่อโรค">
-
-        <requestFocus />
-    </EditText>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-        <ImageView
-            android:id="@+id/imageView_iconhospital"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_medmodern" />
-
-        <TextView
-            android:id="@+id/textView_pharmaceutical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="30dp"
-            android:text="ยาแผนปัจจุบัน"
-            android:textSize="20sp" />
-
-    </LinearLayout>
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView_pharmaceutical_listdiseases"
         android:scrollbars="vertical"

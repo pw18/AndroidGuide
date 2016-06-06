@@ -1,5 +1,7 @@
 package com.example.androidguide;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,9 +9,13 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -23,17 +29,19 @@ import com.example.adapter.CustomListAid;
 import com.example.controller.listener.RecyclerItemClickListener;
 import com.example.items.MyListAid;
 import com.example.model.AidModel;
+import com.example.model.PhamaceuticalModel;
 import com.example.model.TraditionalModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class AIDActivity extends Fragment implements TextWatcher {
+public class AIDActivity extends Fragment implements TextWatcher,SearchView.OnQueryTextListener {
 	
 
 	private CustomListAid custom_adapter;
 	private RecyclerView recyclerView;
-	private EditText et_search;
+
+	private SearchView searchView = null;
 
 	private CRUD crud;
 	
@@ -53,6 +61,7 @@ public class AIDActivity extends Fragment implements TextWatcher {
 	@Override
 	public void onCreate(@Nullable Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setHasOptionsMenu(true);
 
 //		txt = new String[]{
 //				getResources().getString(R.string.strCystitis),
@@ -110,11 +119,10 @@ public class AIDActivity extends Fragment implements TextWatcher {
 		items = crud.selectAidAll();
 		n_item = crud.selectAidAll();
 
-
 		custom_adapter = new CustomListAid(items);
 		recyclerView.setAdapter(custom_adapter);
 
-		et_search.addTextChangedListener(this);
+
 		recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getContext(), new RecyclerItemClickListener.OnItemClickListener() {
 
 			@Override
@@ -128,12 +136,10 @@ public class AIDActivity extends Fragment implements TextWatcher {
 
 	}
 
-
-	
 	private void setWidget(View view) {
 		// TODO Auto-generated method stub
 		recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView_firstaid_listdiseases);
-		et_search = (EditText) view.findViewById(R.id.editText_search_aid);
+
 	}
 
 	@Override
@@ -143,21 +149,64 @@ public class AIDActivity extends Fragment implements TextWatcher {
 
 	@Override
 	public void onTextChanged(CharSequence s, int start, int before, int count) {
-		String search = et_search.getText().toString();
-		int txtlength = search.length();
+
+	}
+
+	@Override
+	public void afterTextChanged(Editable s) {
+
+	}
+
+	@Override
+	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+		inflater.inflate(R.menu.main_menu, menu);
+		MenuItem search = menu.findItem(R.id.action_search);
+		SearchManager searchManager = (SearchManager) getActivity().getSystemService(Context.SEARCH_SERVICE);
+
+		if (search != null)
+			searchView = (SearchView) search.getActionView();
+		if (searchView != null)
+			searchView.setSearchableInfo(searchManager.getSearchableInfo(getActivity().getComponentName()));
+		searchView.setOnQueryTextListener(this);
+		super.onCreateOptionsMenu(menu, inflater);
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+			case R.id.action_search:
+				// Not implemented here
+				return false;
+			default:
+				break;
+		}
+		searchView.setOnQueryTextListener(this);
+		return super.onOptionsItemSelected(item);
+	}
+
+	@Override
+	public boolean onQueryTextSubmit(String query) {
+		return false;
+	}
+
+	@Override
+	public boolean onQueryTextChange(String newText) {
+
+		int txtlength = newText.length();
 		if (n_item != null) {
 			if (txtlength > 0) {
-
 				List<AidModel> appListSort = new ArrayList<>();
 
 				for (int i = 0; i < n_item.size(); i++) {
 					String sApp = n_item.get(i).getName();
 					if (txtlength <= sApp.length()) {
-						if (search.equalsIgnoreCase((String) sApp.subSequence(0, txtlength))) {
+						if (newText.equalsIgnoreCase((String) sApp
+								.subSequence(0, txtlength))) {
 							appListSort.add(n_item.get(i));
 						}
 					}
 				}
+
 				items.clear();
 				for (int i = 0; i < appListSort.size(); i++) {
 					items.add(appListSort.get(i));
@@ -171,11 +220,6 @@ public class AIDActivity extends Fragment implements TextWatcher {
 			}
 			custom_adapter.notifyDataSetChanged();
 		}
-
-	}
-
-	@Override
-	public void afterTextChanged(Editable s) {
-
+		return true;
 	}
 }

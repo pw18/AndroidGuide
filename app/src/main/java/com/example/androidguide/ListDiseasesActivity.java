@@ -42,7 +42,7 @@ public class ListDiseasesActivity extends Fragment implements TextWatcher, Searc
 
     private CustomListDiseases custom_adapter;
     private RecyclerView recyclerView;
-    private EditText et_search;
+
 
     private String url = "http://192.168.1.134/services/diseases.php";
 
@@ -134,7 +134,7 @@ public class ListDiseasesActivity extends Fragment implements TextWatcher, Searc
 
         recyclerView.setAdapter(custom_adapter);
 
-        et_search.addTextChangedListener(this);
+
 
         recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getContext(), new RecyclerItemClickListener.OnItemClickListener() {
             @Override
@@ -169,7 +169,7 @@ public class ListDiseasesActivity extends Fragment implements TextWatcher, Searc
     private void setWidget(View view) {
         // TODO Auto-generated method stub
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView_diseases_listdiseases);
-        et_search = (EditText) view.findViewById(R.id.editText_search_diseases);
+
 
     }
 
@@ -180,35 +180,7 @@ public class ListDiseasesActivity extends Fragment implements TextWatcher, Searc
 
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {
-        String search = et_search.getText().toString();
-        int txtlength = search.length();
-        if (n_item != null) {
-            if (txtlength > 0) {
-                List<DiseasesModel> appListSort = new ArrayList<>();
 
-                for (int i = 0; i < n_item.size(); i++) {
-                    String sApp = n_item.get(i).getName();
-                    if (txtlength <= sApp.length()) {
-                        if (search.equalsIgnoreCase((String) sApp
-                                .subSequence(0, txtlength))) {
-                            appListSort.add(n_item.get(i));
-                        }
-                    }
-                }
-
-                items.clear();
-                for (int i = 0; i < appListSort.size(); i++) {
-                    items.add(appListSort.get(i));
-                }
-
-            } else {
-                items.clear();
-                for (int i = 0; i < n_item.size(); i++) {
-                    items.add(n_item.get(i));
-                }
-            }
-            custom_adapter.notifyDataSetChanged();
-        }
     }
 
     @Override
