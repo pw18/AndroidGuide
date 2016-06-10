@@ -34,6 +34,7 @@ public class MainMenuActivity extends AppCompatActivity
         setContentView(R.layout.activity_main_menu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("HealthCare");
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -84,7 +85,7 @@ public class MainMenuActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         Fragment fragment = null;
-        if(id == R.id.menu_info) {
+        if(id == R.id.menu_knowledge) {
             fragment = InformationFragment.newInstance();
         } else if (id == R.id.menu_diseases) {
             fragment = ListDiseasesActivity.newInstance();
@@ -99,6 +100,7 @@ public class MainMenuActivity extends AppCompatActivity
         } else if (id == R.id.menu_developer) {
             fragment = AboutUsActivity.newInstance();
         }
+        
         /*
         else if (id == R.id.menu_copydb) {
             fragment = null;

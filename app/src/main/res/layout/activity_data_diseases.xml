@@ -29,6 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ชื่อโรค:"
+                android:textColor="#003366"
                 android:textStyle="bold"
                 android:layout_gravity="center"/>
 
@@ -60,6 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="อาการของโรค:"
+                android:textColor="#003366"
                 android:textStyle="bold"
                 android:layout_gravity="center"/>
 
@@ -93,6 +95,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="สาเหตุการเกิดโรค:"
+                android:textColor="#003366"
                 android:textStyle="bold"
                 android:layout_gravity="center"/>
 
@@ -126,6 +129,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="อาการที่ควรไปพบแพทย์อย่างเร่งด่วน:"
+                android:textColor="#003366"
                 android:textStyle="bold"
                 android:layout_gravity="center"/>
         </LinearLayout>

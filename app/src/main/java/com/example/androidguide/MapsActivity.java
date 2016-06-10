@@ -79,7 +79,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             for(HospitalProvinceModel data : item){
                 String nLat = data.getLat().replace(", ", "");
                 LatLng sydney = new LatLng(Double.parseDouble(nLat.replace(",", "")), Double.parseDouble(data.getLng()));
-                mMap.addMarker(new MarkerOptions().position(sydney).title(data.getName()));
+                mMap.addMarker(new MarkerOptions().position(sydney).title(data.getName()).snippet(data.getAddress()));
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
             }
         }

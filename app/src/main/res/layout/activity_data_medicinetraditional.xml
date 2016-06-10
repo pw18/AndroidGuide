@@ -24,6 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ขนานยาแผนโบราณขนาดยาสำหรับผู้ใหญ่:"
+                android:textColor="#003366"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -41,6 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ชื่อโรค:"
+                android:textColor="#003366"
                 android:textStyle="bold"
                 android:layout_gravity="center"/>
 
@@ -74,6 +76,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="รายละเอียดการใช้สมุนไพร:"
+                android:textColor="#003366"
                 android:textStyle="bold"
                 android:layout_gravity="center"/>
 

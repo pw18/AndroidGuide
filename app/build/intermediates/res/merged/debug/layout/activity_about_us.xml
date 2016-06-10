@@ -30,7 +30,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="ข้อมูลผู้พัฒนา" />
+        android:text="ข้อมูลผู้พัฒนา"
+        android:textColor="#003366"/>
 
 
 
@@ -45,6 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ"
+        android:textColor="#FF0000"
         android:textSize="16sp"
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"/>
@@ -53,6 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ภาควิชาการจัดการเทคโนโลยีการผลิตและสารสนเทศ"
+            android:textColor="#FF0000"
             android:paddingTop="10dp"
             android:textSize="14sp"
             android:textStyle="bold"
@@ -62,6 +65,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="อาจารย์ที่ปรึกษาปริญญานิพนธ์หลัก:"
+            android:textColor="#003366"
             android:paddingTop="10dp"
             android:textSize="14sp"
             android:textStyle="bold"/>
@@ -76,6 +80,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="อาจารย์ที่ปรึกษาปริญญานิพนธ์ร่วม:"
+            android:textColor="#003366"
             android:paddingTop="10dp"
             android:textSize="14sp"
             android:textStyle="bold"/>
@@ -89,6 +94,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ข้อมูลโรค30โรค:"
+            android:textColor="#003366"
             android:paddingTop="10dp"
             android:textSize="14sp"
             android:textStyle="bold"/>
@@ -110,6 +116,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ผู้จัดทำ:"
+            android:textColor="#003366"
             android:paddingTop="10dp"
             android:textSize="14sp"
             android:textStyle="bold"/>
@@ -118,7 +125,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="นางสาวพัชรา มาตย์สถิตย์
-                          นางสาวปวีณา จำมะเทวี "
+                                                    นางสาวปวีณา จำมะเทวี "
             android:paddingTop="10dp"
             android:textSize="14sp" />
 

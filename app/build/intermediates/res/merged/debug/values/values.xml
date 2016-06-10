@@ -392,6 +392,8 @@
     <string name="strDataAboutDeveloper">แอพพลิเคชั่นพัฒนาโดยนักศึกษาปริญญานิพนธ์จากมหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ\nเสนอโดย\nนางสาวพัชรา มาตย์สถิตย์ และ นางสาวปวีณา จำมะเทวี\nโดยมีอาจารย์ที่ปรึกษาหลักผู้ให้คำปรึกษาด้านการทำปริญญานิพนธ์คือ\nนางฐิติมา ช่วงชัย\nที่ปรึกษาร่วมผู้ให้คำปรึกษาและตรวจสอบด้านข้อมูลโรคทั้ง 30โรค
     คือ\nเภสัชกรหญิงกชรัตน์ ชีวพฤกษ์\nข้อมูลโรคภายในแอพพลิเคชั่นได้นำข้อมูลมาจากหนังสือ\nรู้ทันโรครู้ทันหมอ เล่ม 1 และ รู้ทันโรครู้ทันหมอ เล่ม 2
     \nผู้เขียน คือ นายแพทย์พินิจ ลิ้มสุคนธ์</string>
+    <string name="strDataknowlage1">โรค เป็นสภาวะผิดปกติของร่างกายหรือจิตใจของสิ่งมีชีวิต ซึ่งทำให้การทำงานของร่างกายเสียไปหรืออาจทำให้เกิดอันตรายถึงชีวิต
+        โรคยังอาจหมายถึงภาวะการทำงานของร่างกายซึ่งทำให้เกิดอันตรายแก่ตัวเองซึ่งจะแสดงออกมาเป็นอาการหรืออาการแสดงต่อโรคนั้นๆ</string>
     <string name="strDiarrhea">Diarrhea</string>
     <string name="strDysmenorrhea">Dysmenorrhea</string>
     <string name="strEczema">Eczema</string>
@@ -405,6 +407,7 @@
     <string name="strGlobalHospital">Hospital</string>
     <string name="strGlobalMedicineModern">Medicine Modern</string>
     <string name="strGlobalMedicineTraditional">Medicine Traditional</string>
+    <string name="strGlobalknowledge">Knowledge</string>
     <string name="strGnathostomiasis">Gnathostomiasis</string>
     <string name="strHerpesSimplex">Herpes Simplex</string>
     <string name="strHordeolum">Hordeolum</string>

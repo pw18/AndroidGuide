@@ -3,9 +3,9 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/menu_info"
-            android:icon="@drawable/ic_diseases"
-            android:title="Info" />
+            android:id="@+id/menu_knowledge"
+            android:icon="@drawable/ic_info"
+            android:title="@string/strGlobalknowledge" />
 
         <item
             android:id="@+id/menu_diseases"

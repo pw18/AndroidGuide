@@ -4,6 +4,7 @@
     <string name="app_name">AndroidGuide</string>
 
     <string name="test">ทดสอบ</string>
+    <string name="strGlobalknowledge">เกร็ดความรู้</string>
     <string name="strGlobalDiseases">รายชื่อโรค</string>
     <string name="strGlobalMedicineModern">ยาแผนปัจจุบัน</string>
     <string name="strGlobalMedicineTraditional">ยาแผนโบราณ</string>
