@@ -40,5 +40,10 @@ public class CustomListPharmaceutical extends RecyclerView.Adapter<MyListPharmac
 			return  items.size();
 		return 0;
 	}
+	public void setFilter(List<PhamaceuticalModel> itemsmodel){
+		items = new ArrayList<>();
+		items.addAll(itemsmodel);
+		notifyDataSetChanged();
+	}
 }
 

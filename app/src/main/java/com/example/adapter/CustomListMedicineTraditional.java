@@ -47,6 +47,10 @@ public class CustomListMedicineTraditional extends RecyclerView.Adapter<MyListMe
 			return  items.size();
 		return 0;
 	}
-	
+	public void setFilter(List<TraditionalModel> itemsmodel){
+		items = new ArrayList<>();
+		items.addAll(itemsmodel);
+		notifyDataSetChanged();
+	}
 }
 

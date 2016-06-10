@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
+    <group android:id="@+id/group_menu"
+        android:checkableBehavior="single">
         <item
             android:id="@+id/menu_knowledge"
             android:icon="@drawable/ic_info"
@@ -27,16 +28,22 @@
             android:id="@+id/menu_hospital"
             android:icon="@drawable/ic_hospital"
             android:title="@string/strGlobalHospital" />
+        
+    </group>
+
+    <group android:id="@+id/group_developer"
+        android:checkableBehavior="single">
         <item
             android:id="@+id/menu_developer"
             android:icon="@drawable/ic_developer"
             android:title="@string/strGlobalAboutDeveloper" />
+    </group>
 
         <!--<item-->
             <!--android:id="@+id/menu_copydb"-->
             <!--android:icon="@drawable/ic_developer"-->
             <!--android:title="copy db" />-->
 
-    </group>
+
 
 </menu>

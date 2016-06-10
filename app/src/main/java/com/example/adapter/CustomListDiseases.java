@@ -48,4 +48,9 @@ public class CustomListDiseases extends RecyclerView.Adapter<MyListDiseasesItemV
 			return items.size();
 		return 0;
 	}
+	public void setFilter(List<DiseasesModel> itemsmodel){
+		items = new ArrayList<>();
+		items.addAll(itemsmodel);
+		notifyDataSetChanged();
+	}
 }

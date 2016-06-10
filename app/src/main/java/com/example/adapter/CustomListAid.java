@@ -44,5 +44,10 @@ public class CustomListAid extends RecyclerView.Adapter<MyListAidItemViewHolder>
 			return  items.size();
 		return 0;
 	}
+	public void setFilter(List<AidModel> itemsmodel){
+		items = new ArrayList<>();
+		items.addAll(itemsmodel);
+		notifyDataSetChanged();
+	}
 
 }

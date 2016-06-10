@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -38,7 +39,7 @@ import org.json.JSONArray;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListDiseasesActivity extends Fragment implements TextWatcher, SearchView.OnQueryTextListener{
+public class ListDiseasesActivity extends Fragment implements  SearchView.OnQueryTextListener /*,TextWatcher*/{
 
     private CustomListDiseases custom_adapter;
     private RecyclerView recyclerView;
@@ -173,36 +174,78 @@ public class ListDiseasesActivity extends Fragment implements TextWatcher, Searc
 
     }
 
-    @Override
-    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-    }
-
-    @Override
-    public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-    }
-
-    @Override
-    public void afterTextChanged(Editable s) {
-
-    }
+//    @Override
+//    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+//
+//    }
+//
+//    @Override
+//    public void onTextChanged(CharSequence s, int start, int before, int count) {
+//
+//    }
+//
+//    @Override
+//    public void afterTextChanged(Editable s) {
+//
+//    }
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.main_menu, menu);
-        MenuItem search = menu.findItem(R.id.action_search);
-        SearchManager searchManager = (SearchManager) getActivity().getSystemService(Context.SEARCH_SERVICE);
-
-        if (search != null)
-            searchView = (SearchView) search.getActionView();
-        if (searchView != null)
-            searchView.setSearchableInfo(searchManager.getSearchableInfo(getActivity().getComponentName()));
+//        MenuItem search = menu.findItem(R.id.action_search);
+//        SearchManager searchManager = (SearchManager) getActivity().getSystemService(Context.SEARCH_SERVICE);
+//
+//        if (search != null)
+//            searchView = (SearchView) search.getActionView();
+//        if (searchView != null)
+//            searchView.setSearchableInfo(searchManager.getSearchableInfo(getActivity().getComponentName()));
+//        searchView.setOnQueryTextListener(this);
+//
+//        super.onCreateOptionsMenu(menu, inflater);
+//    }
+    final MenuItem item = menu.findItem(R.id.action_search);
+        final SearchView searchView = (SearchView) MenuItemCompat.getActionView(item);
         searchView.setOnQueryTextListener(this);
 
-        super.onCreateOptionsMenu(menu, inflater);
+        MenuItemCompat.setOnActionExpandListener(item,
+                new MenuItemCompat.OnActionExpandListener() {
+                    @Override
+                    public boolean onMenuItemActionCollapse(MenuItem item) {
+                        // Do something when collapsed
+                        custom_adapter.setFilter(n_item);
+                        return true; // Return true to collapse action view
+                    }
+                    @Override
+                    public boolean onMenuItemActionExpand(MenuItem item) {
+                        // Do something when expanded
+                        return true; // Return true to expand action view
+                    }
+                });
+    }
+        @Override
+    public boolean onQueryTextChange(String newText) {
+        final List<DiseasesModel> filteredModelList = filter(n_item, newText);
+            custom_adapter.setFilter(filteredModelList);
+        return true;
     }
 
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
+    }
+
+    private List<DiseasesModel> filter(List<DiseasesModel> models, String query) {
+        query = query.toLowerCase();
+
+        final List<DiseasesModel> filteredModelList = new ArrayList<>();
+        for (DiseasesModel model : models) {
+            final String text = model.getName().toLowerCase();
+            if (text.contains(query)) {
+                filteredModelList.add(model);
+            }
+        }
+        return filteredModelList;
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -216,41 +259,41 @@ public class ListDiseasesActivity extends Fragment implements TextWatcher, Searc
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public boolean onQueryTextSubmit(String query) {
-        return false;
-    }
-
-    @Override
-    public boolean onQueryTextChange(String newText) {
-        int txtlength = newText.length();
-        if (n_item != null) {
-            if (txtlength > 0) {
-                List<DiseasesModel> appListSort = new ArrayList<>();
-
-                for (int i = 0; i < n_item.size(); i++) {
-                    String sApp = n_item.get(i).getName();
-                    if (txtlength <= sApp.length()) {
-                        if (newText.equalsIgnoreCase((String) sApp
-                                .subSequence(0, txtlength))) {
-                            appListSort.add(n_item.get(i));
-                        }
-                    }
-                }
-
-                items.clear();
-                for (int i = 0; i < appListSort.size(); i++) {
-                    items.add(appListSort.get(i));
-                }
-
-            } else {
-                items.clear();
-                for (int i = 0; i < n_item.size(); i++) {
-                    items.add(n_item.get(i));
-                }
-            }
-            custom_adapter.notifyDataSetChanged();
-        }
-        return true;
-    }
+//    @Override
+//    public boolean onQueryTextSubmit(String query) {
+//        return false;
+//    }
+//
+//    @Override
+//    public boolean onQueryTextChange(String newText) {
+//        int txtlength = newText.length();
+//        if (n_item != null) {
+//            if (txtlength > 0) {
+//                List<DiseasesModel> appListSort = new ArrayList<>();
+//
+//                for (int i = 0; i < n_item.size(); i++) {
+//                    String sApp = n_item.get(i).getName();
+//                    if (txtlength <= sApp.length()) {
+//                        if (newText.equalsIgnoreCase((String) sApp
+//                                .subSequence(0, txtlength))) {
+//                            appListSort.add(n_item.get(i));
+//                        }
+//                    }
+//                }
+//
+//                items.clear();
+//                for (int i = 0; i < appListSort.size(); i++) {
+//                    items.add(appListSort.get(i));
+//                }
+//
+//            } else {
+//                items.clear();
+//                for (int i = 0; i < n_item.size(); i++) {
+//                    items.add(n_item.get(i));
+//                }
+//            }
+//            custom_adapter.notifyDataSetChanged();
+//        }
+//        return true;
+//    }
 }
