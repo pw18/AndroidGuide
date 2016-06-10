@@ -47,7 +47,6 @@ public class MainMenuActivity extends AppCompatActivity
 
         getSupportFragmentManager().beginTransaction().replace(R.id.content, new InformationFragment().newInstance()).commit();
     }
-
     @Override
     public void onBackPressed() {
         if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -100,7 +99,7 @@ public class MainMenuActivity extends AppCompatActivity
         } else if (id == R.id.menu_developer) {
             fragment = AboutUsActivity.newInstance();
         }
-        
+
         /*
         else if (id == R.id.menu_copydb) {
             fragment = null;
@@ -125,7 +124,6 @@ public class MainMenuActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
     private void copyDataBase(String path) {
         byte[] buffer = new byte[1024];
         OutputStream myOutput = null;
