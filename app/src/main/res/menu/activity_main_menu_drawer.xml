@@ -28,7 +28,7 @@
             android:id="@+id/menu_hospital"
             android:icon="@drawable/ic_hospital"
             android:title="@string/strGlobalHospital" />
-        
+
     </group>
 
     <group android:id="@+id/group_developer"
